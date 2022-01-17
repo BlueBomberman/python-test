@@ -1,0 +1,179 @@
+{
+    "version": "2.0",
+    "class": "dataset",
+    "href": "https://data.apps.fao.org/map/catalog/srv/api/records/59f7a5ef-2be4-43ee-9600-a6a9e9ff562a/attachments/MapSpam_Dimensions.json",
+    "label": "Avian Influenza Schema",
+    "source": "https://data.apps.fao.org/map/catalog/srv/eng/catalog.search#/metadata/59f7a5ef-2be4-43ee-9600-a6a9e9ff562a",
+    "updated": "2013-04-19",
+    "value": [],
+    "id": [
+      "serotype","diagnosis_status", "animal_type", "start_date", "end_date"
+    ],
+    "size": [
+      44, 5, 6, 1, 1
+    ],
+    "role": {
+        "time": ["start_date", "end_date"],
+        "metric":["serotype","subtype","diagnosis_status", "animal_type"]
+    },
+    "dimension": {
+        "start_date": {
+            "label": "Start Observation Date",
+            "category": {}
+        },
+        "end_date": {
+            "label": "End Observation Date",
+            "category": {}
+        },
+        "serotype":{
+            "label":"Type",
+            "category": {
+                "index": {
+                    "all":0,
+                    "H10N7 LPAI":1,
+                    "H10N8 LPAI":2,
+                    "H2N2 LPAI":3,
+                    "H3 LPAI":4,
+                    "H3N1 LPAI":5,
+                    "H5 HPAI":6,
+                    "H5 LPAI":7,
+                    "H5N1 HPAI":8,
+                    "H5N1 LPAI":9,
+                    "H5N2 HPAI":10,
+                    "H5N2 LPAI":11,
+                    "H5N3 HPAI":12,
+                    "H5N3 LPAI":13,
+                    "H5N4 HPAI":14,
+                    "H5N5 HPAI":15,
+                    "H5N5 LPAI":16,
+                    "H5N6 HPAI":17,
+                    "H5N6 LPAI":18,
+                    "H5N8 HPAI":19,
+                    "H5N8 LPAI":20,
+                    "H5N9 HPAI":21,
+                    "H5N9 LPAI":22,
+                    "H6N2 LPAI":23,
+                    "H7 HPAI":24,
+                    "H7 LPAI":25,
+                    "H7N1 HPAI":26,
+                    "H7N1 LPAI":27,
+                    "H7N2 HPAI":28,
+                    "H7N2 LPAI":29,
+                    "H7N3 HPAI":30,
+                    "H7N3 LPAI":31,
+                    "H7N4 LPAI":32,
+                    "H7N6 LPAI":33,
+                    "H7N7 HPAI":34,
+                    "H7N7 LPAI":35,
+                    "H7N8 LPAI":36,
+                    "H7N9 HPAI":37,
+                    "H7N9 LPAI":38,
+                    "H9 HPAI":39,
+                    "H9 LPAI":40,
+                    "H9N2 LPAI":41,
+                    "HPAI":42,
+                    "LPAI":43
+                },
+                "label": {
+                    "all":"All",
+                    "H10N7 LPAI":"H10N7 LPAI",
+                    "H10N8 LPAI":"H10N8 LPAI",
+                    "H2N2 LPAI":"H2N2 LPAI",
+                    "H3 LPAI":"H3 LPAI",
+                    "H3N1 LPAI":"H3N1 LPAI",
+                    "H5 HPAI":"H5 HPAI",
+                    "H5 LPAI":"H5 LPAI",
+                    "H5N1 HPAI":"H5N1 HPAI",
+                    "H5N1 LPAI":"H5N1 LPAI",
+                    "H5N2 HPAI":"H5N2 HPAI",
+                    "H5N2 LPAI":"H5N2 LPAI",
+                    "H5N3 HPAI":"H5N3 HPAI",
+                    "H5N3 LPAI":"H5N3 LPAI",
+                    "H5N4 HPAI":"H5N4 HPAI",
+                    "H5N5 HPAI":"H5N5 HPAI",
+                    "H5N5 LPAI":"H5N5 LPAI",
+                    "H5N6 HPAI":"H5N6 HPAI",
+                    "H5N6 LPAI":"H5N6 LPAI",
+                    "H5N8 HPAI":"H5N8 HPAI",
+                    "H5N8 LPAI":"H5N8 LPAI",
+                    "H5N9 HPAI":"H5N9 HPAI",
+                    "H5N9 LPAI":"H5N9 LPAI",
+                    "H6N2 LPAI":"H6N2 LPAI",
+                    "H7 HPAI":"H7 HPAI",
+                    "H7 LPAI":"H7 LPAI",
+                    "H7N1 HPAI":"H7N1 HPAI",
+                    "H7N1 LPAI":"H7N1 LPAI",
+                    "H7N2 HPAI":"H7N2 HPAI",
+                    "H7N2 LPAI":"H7N2 LPAI",
+                    "H7N3 HPAI":"H7N3 HPAI",
+                    "H7N3 LPAI":"H7N3 LPAI",
+                    "H7N4 LPAI":"H7N4 LPAI",
+                    "H7N6 LPAI":"H7N6 LPAI",
+                    "H7N7 HPAI":"H7N7 HPAI",
+                    "H7N7 LPAI":"H7N7 LPAI",
+                    "H7N8 LPAI":"H7N8 LPAI",
+                    "H7N9 HPAI":"H7N9 HPAI",
+                    "H7N9 LPAI":"H7N9 LPAI",
+                    "H9 HPAI":"H9 HPAI",
+                    "H9 LPAI":"H9 LPAI",
+                    "H9N2 LPAI":"H9N2 LPAI",
+                    "HPAI":"HPAI",
+                    "LPAI":"LPAI"                 
+                }
+            }
+        },
+        "diagnosis_status":{
+            "label":"Diagnosis Status",
+            "category": {
+                "index": {
+                    "confirmed":0,
+                    "denied":1,
+                    "suspected":2,
+                    "no_value":3,
+                    "all":4
+                },
+                "label": {
+                    "confirmed":"Confirmed",
+                    "denied":"Denied",
+                    "suspected":"Suspected",
+                    "no_value":"No value",
+                    "all":"All"
+                }
+            
+            }
+        },
+        "animal_type":{
+            "label":"Animal Type",
+            "category": {
+                "index": {
+                    "captive":0,
+                    "domestic":1,
+                    "environmental_sample":2,
+                    "wild":3,
+                    "no_value":4,
+                    "all":5
+                },
+                "label": {
+                    "captive":"Captive",
+                    "domestic":"Domestic",
+                    "environmental_sample":"Environmental sample",
+                    "wild":"Wild",
+                    "no_value":"No value",
+                    "all":"All"
+                }
+            
+            }
+        }
+
+    },
+    "extension": {
+        "default": {
+            "start_date": "2021-07-22",
+            "end_date": "2021-10-22",
+            "serotype": "all",
+            "diagnosis_status":"confirmed",
+            "animal_type":"all"
+        }
+    }
+}
+  

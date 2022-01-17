@@ -1,0 +1,84 @@
+{
+    "version": "2.0",
+    "class": "dataset",
+    "href": "https://data.apps.fao.org/map/catalog/srv/api/records/59f7a5ef-2be4-43ee-9600-a6a9e9ff562a/attachments/MapSpam_Dimensions.json",
+    "label": "Gridded Livestock Density (Global - 2010 - 10 km)",
+    "source": "https://data.apps.fao.org/map/catalog/srv/eng/catalog.search#/metadata/47457ad7-ed00-4346-81e2-85aacd0e6d91",
+    "updated": "2013-04-19",
+    "value": [],
+    "id": [
+        "lvstk"
+    ],
+    "size": [
+        3
+    ],
+    "role": {
+        "metric": [
+            "lvstk"
+        ]
+    },
+    "dimension": {
+        "lvstk": {
+            "label": "Livestock",
+            "category": {
+                "index": {
+                    "CT": 0,
+                    "GT": 1,
+                    "SH": 2
+                },
+                "label": {
+                    "CT": "Cattle",
+                    "GT": "Goats",
+                    "SH": "Sheep"
+                },
+                "note": {},
+                "unit": {
+                    "CT": {
+                        "symbol": "heads/km²"
+                    },
+                    "GT": {
+                        "symbol": "heads/km²"
+                    },                    
+                    "SH": {
+                        "symbol": "heads/km²"
+                    }
+                }            
+                
+            }
+        }
+    },
+    "extension": {
+        "default": [
+            {
+                "lvstk": "CT"
+            }
+
+        ],
+        "_dimension": {
+            "lvstk": {
+                "default": "CT",
+                "role": {}
+            }
+        },
+        "_styles": [
+            {
+                "dimensions": {
+                    "lvstk": "CT"
+                },
+                "style": "GLW:glw_density_1"
+            },
+            {
+                "dimensions": {
+                    "lvstk": "GT"
+                },
+                "style": "GLW:glw_density_1"
+            },
+            {
+                "dimensions": {
+                    "lvstk": "SH"
+                },
+                "style": "GLW:glw_density_1"
+            }                                                                                              
+        ]
+    }
+}

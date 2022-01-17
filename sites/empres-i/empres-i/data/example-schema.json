@@ -1,0 +1,158 @@
+{
+    "version": "2.0",
+    "class": "dataset",
+    "href": "https://data.apps.fao.org/map/catalog/srv/api/records/59f7a5ef-2be4-43ee-9600-a6a9e9ff562a/attachments/MapSpam_Dimensions.json",
+    "label": "Avian Influenza Schema",
+    "source": "https://data.apps.fao.org/map/catalog/srv/eng/catalog.search#/metadata/59f7a5ef-2be4-43ee-9600-a6a9e9ff562a",
+    "updated": "2013-04-19",
+    "value": [],
+    "id": [
+      "disease","diagnosis_status", "animal_type", "start_date", "end_date"
+    ],
+    "size": [
+      33, 5, 6, 1, 1
+    ],
+    "role": {
+        "time": ["start_date", "end_date"],
+        "metric":["disease","subtype","diagnosis_status", "animal_type"]
+    },
+    "dimension": {
+        "start_date": {
+            "label": "Start Observation Date",
+            "category": {}
+        },
+        "end_date": {
+            "label": "End Observation Date",
+            "category": {}
+        },
+        "disease":{
+            "label":"Disease",
+            "category": {
+                "index": {
+                    "african_horse_sickness":0,
+                    "african_swine_fever":1,
+                    "anthrax":2,
+                    "bluetongue":3,
+                    "bovine_spongiform_encephalopathy":4,
+                    "bovine_tuberculosis":5,
+                    "brucellosis":6,
+                    "brucellosis_brucella_abortus":7,
+                    "brucellosis_brucella_melitensis":8,
+                    "brucellosis_brucella_suis":9,
+                    "classical_swine_fever":10,
+                    "contagious_bovine_pleuropneumonia":11,
+                    "equine_infectious_anaemia":12,
+                    "foot_and_mouth_disease":13,
+                    "glanders":14,
+                    "hendra_virus_disease":15,
+                    "influenza_avian":16,
+                    "influenza_equine":17,
+                    "influenza_swine":18,
+                    "japanese_encephalitis":19,
+                    "leptospirosis":20,
+                    "lumpy_skin_disease":21,
+                    "merscov":22,
+                    "newcastle_disease":23,
+                    "peste_des_petits_ruminants":24,
+                    "porcine_reproductive_and_respiratory_syndrome":25,
+                    "rabies":26,
+                    "rift_valley_fever":27,
+                    "schmallenberg":28,
+                    "sheep_pox_and_goat_pox":29,
+                    "west_nile_fever":30,
+                    "no_value":31,
+                    "all":32
+                },
+                "label": {
+                    "african_horse_sickness":"African horse sickness",
+                    "african_swine_fever":"African swine fever",
+                    "anthrax":"Anthrax",
+                    "bluetongue":"Bluetongue",
+                    "bovine_spongiform_encephalopathy":"Bovine spongiform encephalopathy",
+                    "bovine_tuberculosis":"Bovine tuberculosis",
+                    "brucellosis":"Brucellosis",
+                    "brucellosis_brucella_abortus":"Brucellosis (Brucella abortus)",
+                    "brucellosis_brucella_melitensis":"Brucellosis (Brucella melitensis)",
+                    "brucellosis_brucella_suis":"Brucellosis (Brucella suis)",
+                    "classical_swine_fever":"Classical swine fever",
+                    "contagious_bovine_pleuropneumonia":"Contagious bovine pleuropneumonia",
+                    "equine_infectious_anaemia":"Equine infectious anaemia",
+                    "foot_and_mouth_disease":"Foot and mouth disease",
+                    "glanders":"Glanders",
+                    "hendra_virus_disease":"Hendra Virus Disease",
+                    "influenza_avian":"Influenza - Avian",
+                    "influenza_equine":"Influenza - Equine",
+                    "influenza_swine":"Influenza - Swine",
+                    "japanese_encephalitis":"Japanese Encephalitis",
+                    "leptospirosis":"Leptospirosis",
+                    "lumpy_skin_disease":"Lumpy skin disease",
+                    "merscov":"MERS-CoV",
+                    "newcastle_disease":"Newcastle disease",
+                    "peste_des_petits_ruminants":"Peste des petits ruminants",
+                    "porcine_reproductive_and_respiratory_syndrome":"Porcine reproductive and respiratory syndrome",
+                    "rabies":"Rabies",
+                    "rift_valley_fever":"Rift Valley fever",
+                    "schmallenberg":"Schmallenberg",
+                    "sheep_pox_and_goat_pox":"Sheep pox and goat pox",
+                    "west_nile_fever":"West Nile Fever",
+                    "no_value":"No value",
+                    "all":"All"
+                }
+            
+            }
+        },
+        "diagnosis_status":{
+            "label":"Diagnosis Status",
+            "category": {
+                "index": {
+                    "confirmed":0,
+                    "denied":1,
+                    "suspected":2,
+                    "no_value":3,
+                    "all":4
+                },
+                "label": {
+                    "confirmed":"Confirmed",
+                    "denied":"Denied",
+                    "suspected":"Suspected",
+                    "no_value":"No value",
+                    "all":"All"
+                }
+            
+            }
+        },
+        "animal_type":{
+            "label":"Animal Type",
+            "category": {
+                "index": {
+                    "captive":0,
+                    "domestic":1,
+                    "environmental_sample":2,
+                    "wild":3,
+                    "no_value":4,
+                    "all":5
+                },
+                "label": {
+                    "captive":"Captive",
+                    "domestic":"Domestic",
+                    "environmental_sample":"Environmental sample",
+                    "wild":"Wild",
+                    "no_value":"No value",
+                    "all":"All"
+                }
+            
+            }
+        }
+
+    },
+    "extension": {
+        "default": {
+            "start_date": "2020-01-01",
+            "end_date": "2021-12-31",
+            "disease":"african_horse_sickness",
+            "diagnosis_status":"confirmed",
+            "animal_type":"all"
+        }
+    }
+}
+  
