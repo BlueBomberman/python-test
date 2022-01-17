@@ -1,0 +1,2307 @@
+{
+    "name": "Livestock", 
+    "type": "group", 
+    "order": 2,
+    "description": "markdown.md",
+    "preserveOrder": true,
+    "items": [        
+        {
+            "name": "Animal Density",
+            "id": "c6f03530-f317-11db-9a22-000d939bc5d8",
+            "isEnabled": true,
+            "isLegendVisible": false,
+            "isShown": false,
+            "isPromoted": false,
+            "type": "csw",
+            "getRecordsTemplate": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<csw:GetRecords xmlns:csw=\"http:\/\/www.opengis.net\/cat\/csw\/2.0.2\" version=\"2.0.2\" service=\"CSW\" resultType=\"results\" startPosition=\"1\" maxRecords=\"100\">\r\n    <csw:Query typeNames=\"csw:Record\" xmlns:ogc=\"http:\/\/www.opengis.net\/ogc\" xmlns:gml=\"http:\/\/www.opengis.net\/gml\">\r\n        <csw:ElementSetName>full<\/csw:ElementSetName>\r\n        <csw:Constraint version=\"1.1.0\">\r\n            <ogc:Filter>\r\n                    <ogc:PropertyIsEqualTo>\r\n                          <ogc:PropertyName>dc:identifier<\/ogc:PropertyName>\r\n                          <ogc:Literal>c6f03530-f317-11db-9a22-000d939bc5d8<\/ogc:Literal>\r\n                    <\/ogc:PropertyIsEqualTo>\r\n            <\/ogc:Filter>\r\n        <\/csw:Constraint>\r\n    <\/csw:Query>\r\n<\/csw:GetRecords>",
+            "url": "https://data.apps.fao.org/map/catalog/srv/eng/csw",
+            "baseLink": "https://data.apps.fao.org/map/catalog/srv/eng/catalog.search#/metadata/",
+            "groupBy": "organization",
+            "minimumMaxScaleDenominator": 10000000000,
+            "filterByWmsGetCapabilities": false,
+            "includeCsv": false,
+            "includeGeoJson": false,
+            "includeKml": false,
+            "includeWms": true,
+            "includeWfs": true,
+            "includeEsriMapServer": false,
+            "includeEsriFeatureServer": false,
+            "itemProperties": {
+                "layers": "DEN",
+                "customProperties": {
+                    "dimensionLabelsConfig": {
+                        "dimensionsJsonStatUrl": "https://data.apps.fao.org/static/sites/hand-in-hand/livestock/data/glw_d_da_cube.json",
+                        "showDimensionsOnPanel": false,
+                        "dimensionLabels": [
+                            {
+                                "key": "lvstk",
+                                "default": "CT"
+                            }
+                        ]
+                    },
+                    "styleDefaults": {
+                        "DEN": {
+                            "lvstk-BF": "GLW:glw_density_1",
+                            "lvstk-CT": "GLW:glw_density_1",
+                            "lvstk-CH": "GLW:glw_density_2",
+                            "lvstk-DK": "GLW:glw_density_2",
+                            "lvstk-GT": "GLW:glw_density_1",
+                            "lvstk-HO": "GLW:glw_density_3",
+                            "lvstk-PG": "GLW:glw_density_1",
+                            "lvstk-SH": "GLW:glw_density_1"
+                        }
+                    }
+                },
+                "ignoreUnknownTileErrors": true
+            }
+        },
+        {
+            "name": "Live Animals (national/annual) - FAOSTAT",
+            "type": "group",
+            "preserveOrder": true,
+            "items": [
+                {
+                    "name": "Asses",
+                    "id": "faostat-QA-elem-2111-item-1107",
+                    "url": "https://api.data.apps.fao.org/api/v1/json_to_csv/http://fenixservices.fao.org/faostat/api/v1/en/data/QA?area=2,3,4,5,6,7,8,9,1,10,11,52,12,13,16,14,57,255,23,53,17,18,19,80,20,21,26,27,233,29,35,115,32,33,37,39,40,351,96,128,214,41,44,45,46,47,48,98,49,50,167,107,116,250,54,72,55,56,58,59,60,61,178,63,209,238,66,67,68,70,74,75,73,79,81,84,85,86,89,90,175,91,93,95,97,99,100,101,102,103,104,105,106,109,110,112,108,114,83,118,113,120,119,121,122,123,124,126,256,129,130,131,132,133,134,127,136,137,138,145,141,273,143,144,28,147,148,149,150,153,156,157,158,159,160,154,162,221,165,180,299,166,168,169,170,171,173,174,177,179,117,146,183,185,184,188,189,191,244,193,194,195,272,196,197,200,199,198,25,201,202,277,203,38,276,207,210,211,212,208,216,176,217,218,219,220,222,223,213,227,226,230,225,229,215,231,234,235,155,236,237,249,251,181&area_cs=FAO&element=2111&item=1107&year=1961,1962,1963,1964,1965,1966,1967,1968,1969,1970,1971,1972,1973,1974,1975,1976,1977,1978,1979,1980,1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018&show_codes=true&show_unit=true&show_flags=true&null_values=false&output_type=objects",
+                    "type": "csv",
+                    "hideSource": true,
+                    "initialTimeSource": "2015",
+                    "tableStyle": {
+                        "featureInfoFields": [
+                            "Area",
+                            "Year",
+                            "Value",
+                            "Unit",
+                            "Flag Description",
+                            "Note"
+                        ],
+                        "dataVariable": "Value",
+                        "columns": {
+                            "Domain": {
+                                "type": "HIDDEN"
+                            },
+                            "Domain Code": {
+                                "type": "HIDDEN"
+                            },
+                            "Area": {
+                                "type": "HIDDEN"
+                            },
+                            "Element Code": {
+                                "type": "HIDDEN"
+                            },
+                            "Element": {
+                                "type": "HIDDEN"
+                            },
+                            "Item Code": {
+                                "type": "HIDDEN"
+                            },
+                            "Item": {
+                                "type": "HIDDEN"
+                            },
+                            "Year Code": {
+                                "type": "HIDDEN"
+                            },
+                            "Unit": {
+                                "type": "HIDDEN"
+                            },
+                            "Flag Description": {
+                                "type": "HIDDEN"
+                            },
+                            "Note": {
+                                "type": "HIDDEN"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "Beehives",
+                    "id": "faostat-QA-elem-2111-item-1181",
+                    "url": "https://api.data.apps.fao.org/api/v1/json_to_csv/http://fenixservices.fao.org/faostat/api/v1/en/data/QA?area=2,3,4,5,6,7,8,9,1,10,11,52,12,13,16,14,57,255,23,53,17,18,19,80,20,21,26,27,233,29,35,115,32,33,37,39,40,351,96,128,214,41,44,45,46,47,48,98,49,50,167,107,116,250,54,72,55,56,58,59,60,61,178,63,209,238,66,67,68,70,74,75,73,79,81,84,85,86,89,90,175,91,93,95,97,99,100,101,102,103,104,105,106,109,110,112,108,114,83,118,113,120,119,121,122,123,124,126,256,129,130,131,132,133,134,127,136,137,138,145,141,273,143,144,28,147,148,149,150,153,156,157,158,159,160,154,162,221,165,180,299,166,168,169,170,171,173,174,177,179,117,146,183,185,184,188,189,191,244,193,194,195,272,196,197,200,199,198,25,201,202,277,203,38,276,207,210,211,212,208,216,176,217,218,219,220,222,223,213,227,226,230,225,229,215,231,234,235,155,236,237,249,251,181&area_cs=FAO&element=2111&item=1181&year=1961,1962,1963,1964,1965,1966,1967,1968,1969,1970,1971,1972,1973,1974,1975,1976,1977,1978,1979,1980,1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018&show_codes=true&show_unit=true&show_flags=true&null_values=false&output_type=objects",
+                    "type": "csv",
+                    "hideSource": true,
+                    "initialTimeSource": "2015",
+                    "tableStyle": {
+                        "featureInfoFields": [
+                            "Area",
+                            "Year",
+                            "Value",
+                            "Unit",
+                            "Flag Description",
+                            "Note"
+                        ],
+                        "dataVariable": "Value",
+                        "columns": {
+                            "Domain": {
+                                "type": "HIDDEN"
+                            },
+                            "Domain Code": {
+                                "type": "HIDDEN"
+                            },
+                            "Area": {
+                                "type": "HIDDEN"
+                            },
+                            "Element Code": {
+                                "type": "HIDDEN"
+                            },
+                            "Element": {
+                                "type": "HIDDEN"
+                            },
+                            "Item Code": {
+                                "type": "HIDDEN"
+                            },
+                            "Item": {
+                                "type": "HIDDEN"
+                            },
+                            "Year Code": {
+                                "type": "HIDDEN"
+                            },
+                            "Unit": {
+                                "type": "HIDDEN"
+                            },
+                            "Flag Description": {
+                                "type": "HIDDEN"
+                            },
+                            "Note": {
+                                "type": "HIDDEN"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "Camelids, other",
+                    "id": "faostat-QA-elem-2111-item-1157",
+                    "url": "https://api.data.apps.fao.org/api/v1/json_to_csv/http://fenixservices.fao.org/faostat/api/v1/en/data/QA?area=2,3,4,5,6,7,8,9,1,10,11,52,12,13,16,14,57,255,23,53,17,18,19,80,20,21,26,27,233,29,35,115,32,33,37,39,40,351,96,128,214,41,44,45,46,47,48,98,49,50,167,107,116,250,54,72,55,56,58,59,60,61,178,63,209,238,66,67,68,70,74,75,73,79,81,84,85,86,89,90,175,91,93,95,97,99,100,101,102,103,104,105,106,109,110,112,108,114,83,118,113,120,119,121,122,123,124,126,256,129,130,131,132,133,134,127,136,137,138,145,141,273,143,144,28,147,148,149,150,153,156,157,158,159,160,154,162,221,165,180,299,166,168,169,170,171,173,174,177,179,117,146,183,185,184,188,189,191,244,193,194,195,272,196,197,200,199,198,25,201,202,277,203,38,276,207,210,211,212,208,216,176,217,218,219,220,222,223,213,227,226,230,225,229,215,231,234,235,155,236,237,249,251,181&area_cs=FAO&element=2111&item=1157&year=1961,1962,1963,1964,1965,1966,1967,1968,1969,1970,1971,1972,1973,1974,1975,1976,1977,1978,1979,1980,1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018&show_codes=true&show_unit=true&show_flags=true&null_values=false&output_type=objects",
+                    "type": "csv",
+                    "hideSource": true,
+                    "initialTimeSource": "2015",
+                    "tableStyle": {
+                        "featureInfoFields": [
+                            "Area",
+                            "Year",
+                            "Value",
+                            "Unit",
+                            "Flag Description",
+                            "Note"
+                        ],
+                        "dataVariable": "Value",
+                        "columns": {
+                            "Domain": {
+                                "type": "HIDDEN"
+                            },
+                            "Domain Code": {
+                                "type": "HIDDEN"
+                            },
+                            "Area": {
+                                "type": "HIDDEN"
+                            },
+                            "Element Code": {
+                                "type": "HIDDEN"
+                            },
+                            "Element": {
+                                "type": "HIDDEN"
+                            },
+                            "Item Code": {
+                                "type": "HIDDEN"
+                            },
+                            "Item": {
+                                "type": "HIDDEN"
+                            },
+                            "Year Code": {
+                                "type": "HIDDEN"
+                            },
+                            "Unit": {
+                                "type": "HIDDEN"
+                            },
+                            "Flag Description": {
+                                "type": "HIDDEN"
+                            },
+                            "Note": {
+                                "type": "HIDDEN"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "Camels",
+                    "id": "faostat-QA-elem-2111-item-1126",
+                    "url": "https://api.data.apps.fao.org/api/v1/json_to_csv/http://fenixservices.fao.org/faostat/api/v1/en/data/QA?area=2,3,4,5,6,7,8,9,1,10,11,52,12,13,16,14,57,255,23,53,17,18,19,80,20,21,26,27,233,29,35,115,32,33,37,39,40,351,96,128,214,41,44,45,46,47,48,98,49,50,167,107,116,250,54,72,55,56,58,59,60,61,178,63,209,238,66,67,68,70,74,75,73,79,81,84,85,86,89,90,175,91,93,95,97,99,100,101,102,103,104,105,106,109,110,112,108,114,83,118,113,120,119,121,122,123,124,126,256,129,130,131,132,133,134,127,136,137,138,145,141,273,143,144,28,147,148,149,150,153,156,157,158,159,160,154,162,221,165,180,299,166,168,169,170,171,173,174,177,179,117,146,183,185,184,188,189,191,244,193,194,195,272,196,197,200,199,198,25,201,202,277,203,38,276,207,210,211,212,208,216,176,217,218,219,220,222,223,213,227,226,230,225,229,215,231,234,235,155,236,237,249,251,181&area_cs=FAO&element=2111&item=1126&year=1961,1962,1963,1964,1965,1966,1967,1968,1969,1970,1971,1972,1973,1974,1975,1976,1977,1978,1979,1980,1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018&show_codes=true&show_unit=true&show_flags=true&null_values=false&output_type=objects",
+                    "type": "csv",
+                    "hideSource": true,
+                    "initialTimeSource": "2015",
+                    "tableStyle": {
+                        "featureInfoFields": [
+                            "Area",
+                            "Year",
+                            "Value",
+                            "Unit",
+                            "Flag Description",
+                            "Note"
+                        ],
+                        "dataVariable": "Value",
+                        "columns": {
+                            "Domain": {
+                                "type": "HIDDEN"
+                            },
+                            "Domain Code": {
+                                "type": "HIDDEN"
+                            },
+                            "Area": {
+                                "type": "HIDDEN"
+                            },
+                            "Element Code": {
+                                "type": "HIDDEN"
+                            },
+                            "Element": {
+                                "type": "HIDDEN"
+                            },
+                            "Item Code": {
+                                "type": "HIDDEN"
+                            },
+                            "Item": {
+                                "type": "HIDDEN"
+                            },
+                            "Year Code": {
+                                "type": "HIDDEN"
+                            },
+                            "Unit": {
+                                "type": "HIDDEN"
+                            },
+                            "Flag Description": {
+                                "type": "HIDDEN"
+                            },
+                            "Note": {
+                                "type": "HIDDEN"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "Cattle and Buffaloes",
+                    "type": "group",
+                    "preserveOrder": true,
+                    "items": [
+                        {
+                            "name": "Cattle and Buffaloes",
+                            "id": "faostat-QA-elem-2111-item-1746",
+                            "url": "https://api.data.apps.fao.org/api/v1/json_to_csv/http://fenixservices.fao.org/faostat/api/v1/en/data/QA?area=2,3,4,5,6,7,8,9,1,10,11,52,12,13,16,14,57,255,23,53,17,18,19,80,20,21,26,27,233,29,35,115,32,33,37,39,40,351,96,128,214,41,44,45,46,47,48,98,49,50,167,107,116,250,54,72,55,56,58,59,60,61,178,63,209,238,66,67,68,70,74,75,73,79,81,84,85,86,89,90,175,91,93,95,97,99,100,101,102,103,104,105,106,109,110,112,108,114,83,118,113,120,119,121,122,123,124,126,256,129,130,131,132,133,134,127,136,137,138,145,141,273,143,144,28,147,148,149,150,153,156,157,158,159,160,154,162,221,165,180,299,166,168,169,170,171,173,174,177,179,117,146,183,185,184,188,189,191,244,193,194,195,272,196,197,200,199,198,25,201,202,277,203,38,276,207,210,211,212,208,216,176,217,218,219,220,222,223,213,227,226,230,225,229,215,231,234,235,155,236,237,249,251,181&area_cs=FAO&element=2111&item=1746&year=1961,1962,1963,1964,1965,1966,1967,1968,1969,1970,1971,1972,1973,1974,1975,1976,1977,1978,1979,1980,1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018&show_codes=true&show_unit=true&show_flags=true&null_values=false&output_type=objects",
+                            "type": "csv",
+                            "hideSource": true,
+                            "initialTimeSource": "2015",
+                            "tableStyle": {
+                                "featureInfoFields": [
+                                    "Area",
+                                    "Year",
+                                    "Value",
+                                    "Unit",
+                                    "Flag Description",
+                                    "Note"
+                                ],
+                                "dataVariable": "Value",
+                                "columns": {
+                                    "Domain": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Domain Code": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Area": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Element Code": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Element": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Item Code": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Item": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Year Code": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Unit": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Flag Description": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Note": {
+                                        "type": "HIDDEN"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "name": "Cattle",
+                            "id": "faostat-QA-elem-2111-item-866",
+                            "url": "https://api.data.apps.fao.org/api/v1/json_to_csv/http://fenixservices.fao.org/faostat/api/v1/en/data/QA?area=2,3,4,5,6,7,8,9,1,10,11,52,12,13,16,14,57,255,23,53,17,18,19,80,20,21,26,27,233,29,35,115,32,33,37,39,40,351,96,128,214,41,44,45,46,47,48,98,49,50,167,107,116,250,54,72,55,56,58,59,60,61,178,63,209,238,66,67,68,70,74,75,73,79,81,84,85,86,89,90,175,91,93,95,97,99,100,101,102,103,104,105,106,109,110,112,108,114,83,118,113,120,119,121,122,123,124,126,256,129,130,131,132,133,134,127,136,137,138,145,141,273,143,144,28,147,148,149,150,153,156,157,158,159,160,154,162,221,165,180,299,166,168,169,170,171,173,174,177,179,117,146,183,185,184,188,189,191,244,193,194,195,272,196,197,200,199,198,25,201,202,277,203,38,276,207,210,211,212,208,216,176,217,218,219,220,222,223,213,227,226,230,225,229,215,231,234,235,155,236,237,249,251,181&area_cs=FAO&element=2111&item=866&year=1961,1962,1963,1964,1965,1966,1967,1968,1969,1970,1971,1972,1973,1974,1975,1976,1977,1978,1979,1980,1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018&show_codes=true&show_unit=true&show_flags=true&null_values=false&output_type=objects",
+                            "type": "csv",
+                            "hideSource": true,
+                            "initialTimeSource": "2015",
+                            "tableStyle": {
+                                "featureInfoFields": [
+                                    "Area",
+                                    "Year",
+                                    "Value",
+                                    "Unit",
+                                    "Flag Description",
+                                    "Note"
+                                ],
+                                "dataVariable": "Value",
+                                "columns": {
+                                    "Domain": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Domain Code": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Area": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Element Code": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Element": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Item Code": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Item": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Year Code": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Unit": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Flag Description": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Note": {
+                                        "type": "HIDDEN"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "name": "Buffaloes",
+                            "id": "faostat-QA-elem-2111-item-946",
+                            "url": "https://api.data.apps.fao.org/api/v1/json_to_csv/http://fenixservices.fao.org/faostat/api/v1/en/data/QA?area=2,3,4,5,6,7,8,9,1,10,11,52,12,13,16,14,57,255,23,53,17,18,19,80,20,21,26,27,233,29,35,115,32,33,37,39,40,351,96,128,214,41,44,45,46,47,48,98,49,50,167,107,116,250,54,72,55,56,58,59,60,61,178,63,209,238,66,67,68,70,74,75,73,79,81,84,85,86,89,90,175,91,93,95,97,99,100,101,102,103,104,105,106,109,110,112,108,114,83,118,113,120,119,121,122,123,124,126,256,129,130,131,132,133,134,127,136,137,138,145,141,273,143,144,28,147,148,149,150,153,156,157,158,159,160,154,162,221,165,180,299,166,168,169,170,171,173,174,177,179,117,146,183,185,184,188,189,191,244,193,194,195,272,196,197,200,199,198,25,201,202,277,203,38,276,207,210,211,212,208,216,176,217,218,219,220,222,223,213,227,226,230,225,229,215,231,234,235,155,236,237,249,251,181&area_cs=FAO&element=2111&item=946&year=1961,1962,1963,1964,1965,1966,1967,1968,1969,1970,1971,1972,1973,1974,1975,1976,1977,1978,1979,1980,1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018&show_codes=true&show_unit=true&show_flags=true&null_values=false&output_type=objects",
+                            "type": "csv",
+                            "hideSource": true,
+                            "initialTimeSource": "2015",
+                            "tableStyle": {
+                                "featureInfoFields": [
+                                    "Area",
+                                    "Year",
+                                    "Value",
+                                    "Unit",
+                                    "Flag Description",
+                                    "Note"
+                                ],
+                                "dataVariable": "Value",
+                                "columns": {
+                                    "Domain": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Domain Code": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Area": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Element Code": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Element": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Item Code": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Item": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Year Code": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Unit": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Flag Description": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Note": {
+                                        "type": "HIDDEN"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Horses",
+                    "id": "faostat-QA-elem-2111-item-1096",
+                    "url": "https://api.data.apps.fao.org/api/v1/json_to_csv/http://fenixservices.fao.org/faostat/api/v1/en/data/QA?area=2,3,4,5,6,7,8,9,1,10,11,52,12,13,16,14,57,255,23,53,17,18,19,80,20,21,26,27,233,29,35,115,32,33,37,39,40,351,96,128,214,41,44,45,46,47,48,98,49,50,167,107,116,250,54,72,55,56,58,59,60,61,178,63,209,238,66,67,68,70,74,75,73,79,81,84,85,86,89,90,175,91,93,95,97,99,100,101,102,103,104,105,106,109,110,112,108,114,83,118,113,120,119,121,122,123,124,126,256,129,130,131,132,133,134,127,136,137,138,145,141,273,143,144,28,147,148,149,150,153,156,157,158,159,160,154,162,221,165,180,299,166,168,169,170,171,173,174,177,179,117,146,183,185,184,188,189,191,244,193,194,195,272,196,197,200,199,198,25,201,202,277,203,38,276,207,210,211,212,208,216,176,217,218,219,220,222,223,213,227,226,230,225,229,215,231,234,235,155,236,237,249,251,181&area_cs=FAO&element=2111&item=1096&year=1961,1962,1963,1964,1965,1966,1967,1968,1969,1970,1971,1972,1973,1974,1975,1976,1977,1978,1979,1980,1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018&show_codes=true&show_unit=true&show_flags=true&null_values=false&output_type=objects",
+                    "type": "csv",
+                    "hideSource": true,
+                    "initialTimeSource": "2015",
+                    "tableStyle": {
+                        "featureInfoFields": [
+                            "Area",
+                            "Year",
+                            "Value",
+                            "Unit",
+                            "Flag Description",
+                            "Note"
+                        ],
+                        "dataVariable": "Value",
+                        "columns": {
+                            "Domain": {
+                                "type": "HIDDEN"
+                            },
+                            "Domain Code": {
+                                "type": "HIDDEN"
+                            },
+                            "Area": {
+                                "type": "HIDDEN"
+                            },
+                            "Element Code": {
+                                "type": "HIDDEN"
+                            },
+                            "Element": {
+                                "type": "HIDDEN"
+                            },
+                            "Item Code": {
+                                "type": "HIDDEN"
+                            },
+                            "Item": {
+                                "type": "HIDDEN"
+                            },
+                            "Year Code": {
+                                "type": "HIDDEN"
+                            },
+                            "Unit": {
+                                "type": "HIDDEN"
+                            },
+                            "Flag Description": {
+                                "type": "HIDDEN"
+                            },
+                            "Note": {
+                                "type": "HIDDEN"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "Mules",
+                    "id": "faostat-QA-elem-2111-item-1110",
+                    "url": "https://api.data.apps.fao.org/api/v1/json_to_csv/http://fenixservices.fao.org/faostat/api/v1/en/data/QA?area=2,3,4,5,6,7,8,9,1,10,11,52,12,13,16,14,57,255,23,53,17,18,19,80,20,21,26,27,233,29,35,115,32,33,37,39,40,351,96,128,214,41,44,45,46,47,48,98,49,50,167,107,116,250,54,72,55,56,58,59,60,61,178,63,209,238,66,67,68,70,74,75,73,79,81,84,85,86,89,90,175,91,93,95,97,99,100,101,102,103,104,105,106,109,110,112,108,114,83,118,113,120,119,121,122,123,124,126,256,129,130,131,132,133,134,127,136,137,138,145,141,273,143,144,28,147,148,149,150,153,156,157,158,159,160,154,162,221,165,180,299,166,168,169,170,171,173,174,177,179,117,146,183,185,184,188,189,191,244,193,194,195,272,196,197,200,199,198,25,201,202,277,203,38,276,207,210,211,212,208,216,176,217,218,219,220,222,223,213,227,226,230,225,229,215,231,234,235,155,236,237,249,251,181&area_cs=FAO&element=2111&item=1110&year=1961,1962,1963,1964,1965,1966,1967,1968,1969,1970,1971,1972,1973,1974,1975,1976,1977,1978,1979,1980,1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018&show_codes=true&show_unit=true&show_flags=true&null_values=false&output_type=objects",
+                    "type": "csv",
+                    "hideSource": true,
+                    "initialTimeSource": "2015",
+                    "tableStyle": {
+                        "featureInfoFields": [
+                            "Area",
+                            "Year",
+                            "Value",
+                            "Unit",
+                            "Flag Description",
+                            "Note"
+                        ],
+                        "dataVariable": "Value",
+                        "columns": {
+                            "Domain": {
+                                "type": "HIDDEN"
+                            },
+                            "Domain Code": {
+                                "type": "HIDDEN"
+                            },
+                            "Area": {
+                                "type": "HIDDEN"
+                            },
+                            "Element Code": {
+                                "type": "HIDDEN"
+                            },
+                            "Element": {
+                                "type": "HIDDEN"
+                            },
+                            "Item Code": {
+                                "type": "HIDDEN"
+                            },
+                            "Item": {
+                                "type": "HIDDEN"
+                            },
+                            "Year Code": {
+                                "type": "HIDDEN"
+                            },
+                            "Unit": {
+                                "type": "HIDDEN"
+                            },
+                            "Flag Description": {
+                                "type": "HIDDEN"
+                            },
+                            "Note": {
+                                "type": "HIDDEN"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "Pigs",
+                    "id": "faostat-QA-elem-2111-item-1034",
+                    "url": "https://api.data.apps.fao.org/api/v1/json_to_csv/http://fenixservices.fao.org/faostat/api/v1/en/data/QA?area=2,3,4,5,6,7,8,9,1,10,11,52,12,13,16,14,57,255,23,53,17,18,19,80,20,21,26,27,233,29,35,115,32,33,37,39,40,351,96,128,214,41,44,45,46,47,48,98,49,50,167,107,116,250,54,72,55,56,58,59,60,61,178,63,209,238,66,67,68,70,74,75,73,79,81,84,85,86,89,90,175,91,93,95,97,99,100,101,102,103,104,105,106,109,110,112,108,114,83,118,113,120,119,121,122,123,124,126,256,129,130,131,132,133,134,127,136,137,138,145,141,273,143,144,28,147,148,149,150,153,156,157,158,159,160,154,162,221,165,180,299,166,168,169,170,171,173,174,177,179,117,146,183,185,184,188,189,191,244,193,194,195,272,196,197,200,199,198,25,201,202,277,203,38,276,207,210,211,212,208,216,176,217,218,219,220,222,223,213,227,226,230,225,229,215,231,234,235,155,236,237,249,251,181&area_cs=FAO&element=2111&item=1034&year=1961,1962,1963,1964,1965,1966,1967,1968,1969,1970,1971,1972,1973,1974,1975,1976,1977,1978,1979,1980,1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018&show_codes=true&show_unit=true&show_flags=true&null_values=false&output_type=objects",
+                    "type": "csv",
+                    "hideSource": true,
+                    "initialTimeSource": "2015",
+                    "tableStyle": {
+                        "featureInfoFields": [
+                            "Area",
+                            "Year",
+                            "Value",
+                            "Unit",
+                            "Flag Description",
+                            "Note"
+                        ],
+                        "dataVariable": "Value",
+                        "columns": {
+                            "Domain": {
+                                "type": "HIDDEN"
+                            },
+                            "Domain Code": {
+                                "type": "HIDDEN"
+                            },
+                            "Area": {
+                                "type": "HIDDEN"
+                            },
+                            "Element Code": {
+                                "type": "HIDDEN"
+                            },
+                            "Element": {
+                                "type": "HIDDEN"
+                            },
+                            "Item Code": {
+                                "type": "HIDDEN"
+                            },
+                            "Item": {
+                                "type": "HIDDEN"
+                            },
+                            "Year Code": {
+                                "type": "HIDDEN"
+                            },
+                            "Unit": {
+                                "type": "HIDDEN"
+                            },
+                            "Flag Description": {
+                                "type": "HIDDEN"
+                            },
+                            "Note": {
+                                "type": "HIDDEN"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "Poultry Birds",
+                    "type": "group",
+                    "preserveOrder": true,
+                    "items": [
+                        {
+                            "name": "Poultry Birds",
+                            "id": "faostat-QA-elem-2111-item-2029",
+                            "url": "https://api.data.apps.fao.org/api/v1/json_to_csv/http://fenixservices.fao.org/faostat/api/v1/en/data/QA?area=2,3,4,5,6,7,8,9,1,10,11,52,12,13,16,14,57,255,23,53,17,18,19,80,20,21,26,27,233,29,35,115,32,33,37,39,40,351,96,128,214,41,44,45,46,47,48,98,49,50,167,107,116,250,54,72,55,56,58,59,60,61,178,63,209,238,66,67,68,70,74,75,73,79,81,84,85,86,89,90,175,91,93,95,97,99,100,101,102,103,104,105,106,109,110,112,108,114,83,118,113,120,119,121,122,123,124,126,256,129,130,131,132,133,134,127,136,137,138,145,141,273,143,144,28,147,148,149,150,153,156,157,158,159,160,154,162,221,165,180,299,166,168,169,170,171,173,174,177,179,117,146,183,185,184,188,189,191,244,193,194,195,272,196,197,200,199,198,25,201,202,277,203,38,276,207,210,211,212,208,216,176,217,218,219,220,222,223,213,227,226,230,225,229,215,231,234,235,155,236,237,249,251,181&area_cs=FAO&element=2111&item=2029&year=1961,1962,1963,1964,1965,1966,1967,1968,1969,1970,1971,1972,1973,1974,1975,1976,1977,1978,1979,1980,1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018&show_codes=true&show_unit=true&show_flags=true&null_values=false&output_type=objects",
+                            "type": "csv",
+                            "hideSource": true,
+                            "initialTimeSource": "2015",
+                            "tableStyle": {
+                                "featureInfoFields": [
+                                    "Area",
+                                    "Year",
+                                    "Value",
+                                    "Unit",
+                                    "Flag Description",
+                                    "Note"
+                                ],
+                                "dataVariable": "Value",
+                                "columns": {
+                                    "Domain": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Domain Code": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Area": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Element Code": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Element": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Item Code": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Item": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Year Code": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Unit": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Flag Description": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Note": {
+                                        "type": "HIDDEN"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "name": "Chickens",
+                            "id": "faostat-QA-elem-2111-item-1057",
+                            "url": "https://api.data.apps.fao.org/api/v1/json_to_csv/http://fenixservices.fao.org/faostat/api/v1/en/data/QA?area=2,3,4,5,6,7,8,9,1,10,11,52,12,13,16,14,57,255,23,53,17,18,19,80,20,21,26,27,233,29,35,115,32,33,37,39,40,351,96,128,214,41,44,45,46,47,48,98,49,50,167,107,116,250,54,72,55,56,58,59,60,61,178,63,209,238,66,67,68,70,74,75,73,79,81,84,85,86,89,90,175,91,93,95,97,99,100,101,102,103,104,105,106,109,110,112,108,114,83,118,113,120,119,121,122,123,124,126,256,129,130,131,132,133,134,127,136,137,138,145,141,273,143,144,28,147,148,149,150,153,156,157,158,159,160,154,162,221,165,180,299,166,168,169,170,171,173,174,177,179,117,146,183,185,184,188,189,191,244,193,194,195,272,196,197,200,199,198,25,201,202,277,203,38,276,207,210,211,212,208,216,176,217,218,219,220,222,223,213,227,226,230,225,229,215,231,234,235,155,236,237,249,251,181&area_cs=FAO&element=2111&item=1057&year=1961,1962,1963,1964,1965,1966,1967,1968,1969,1970,1971,1972,1973,1974,1975,1976,1977,1978,1979,1980,1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018&show_codes=true&show_unit=true&show_flags=true&null_values=false&output_type=objects",
+                            "type": "csv",
+                            "hideSource": true,
+                            "initialTimeSource": "2015",
+                            "tableStyle": {
+                                "featureInfoFields": [
+                                    "Area",
+                                    "Year",
+                                    "Value",
+                                    "Unit",
+                                    "Flag Description",
+                                    "Note"
+                                ],
+                                "dataVariable": "Value",
+                                "columns": {
+                                    "Domain": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Domain Code": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Area": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Element Code": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Element": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Item Code": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Item": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Year Code": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Unit": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Flag Description": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Note": {
+                                        "type": "HIDDEN"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "name": "Ducks",
+                            "id": "faostat-QA-elem-2111-item-1068",
+                            "url": "https://api.data.apps.fao.org/api/v1/json_to_csv/http://fenixservices.fao.org/faostat/api/v1/en/data/QA?area=2,3,4,5,6,7,8,9,1,10,11,52,12,13,16,14,57,255,23,53,17,18,19,80,20,21,26,27,233,29,35,115,32,33,37,39,40,351,96,128,214,41,44,45,46,47,48,98,49,50,167,107,116,250,54,72,55,56,58,59,60,61,178,63,209,238,66,67,68,70,74,75,73,79,81,84,85,86,89,90,175,91,93,95,97,99,100,101,102,103,104,105,106,109,110,112,108,114,83,118,113,120,119,121,122,123,124,126,256,129,130,131,132,133,134,127,136,137,138,145,141,273,143,144,28,147,148,149,150,153,156,157,158,159,160,154,162,221,165,180,299,166,168,169,170,171,173,174,177,179,117,146,183,185,184,188,189,191,244,193,194,195,272,196,197,200,199,198,25,201,202,277,203,38,276,207,210,211,212,208,216,176,217,218,219,220,222,223,213,227,226,230,225,229,215,231,234,235,155,236,237,249,251,181&area_cs=FAO&element=2111&item=1068&year=1961,1962,1963,1964,1965,1966,1967,1968,1969,1970,1971,1972,1973,1974,1975,1976,1977,1978,1979,1980,1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018&show_codes=true&show_unit=true&show_flags=true&null_values=false&output_type=objects",
+                            "type": "csv",
+                            "hideSource": true,
+                            "initialTimeSource": "2015",
+                            "tableStyle": {
+                                "featureInfoFields": [
+                                    "Area",
+                                    "Year",
+                                    "Value",
+                                    "Unit",
+                                    "Flag Description",
+                                    "Note"
+                                ],
+                                "dataVariable": "Value",
+                                "columns": {
+                                    "Domain": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Domain Code": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Area": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Element Code": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Element": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Item Code": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Item": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Year Code": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Unit": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Flag Description": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Note": {
+                                        "type": "HIDDEN"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "name": "Geese and guinea fowls",
+                            "id": "faostat-QA-elem-2111-item-1072",
+                            "url": "https://api.data.apps.fao.org/api/v1/json_to_csv/http://fenixservices.fao.org/faostat/api/v1/en/data/QA?area=2,3,4,5,6,7,8,9,1,10,11,52,12,13,16,14,57,255,23,53,17,18,19,80,20,21,26,27,233,29,35,115,32,33,37,39,40,351,96,128,214,41,44,45,46,47,48,98,49,50,167,107,116,250,54,72,55,56,58,59,60,61,178,63,209,238,66,67,68,70,74,75,73,79,81,84,85,86,89,90,175,91,93,95,97,99,100,101,102,103,104,105,106,109,110,112,108,114,83,118,113,120,119,121,122,123,124,126,256,129,130,131,132,133,134,127,136,137,138,145,141,273,143,144,28,147,148,149,150,153,156,157,158,159,160,154,162,221,165,180,299,166,168,169,170,171,173,174,177,179,117,146,183,185,184,188,189,191,244,193,194,195,272,196,197,200,199,198,25,201,202,277,203,38,276,207,210,211,212,208,216,176,217,218,219,220,222,223,213,227,226,230,225,229,215,231,234,235,155,236,237,249,251,181&area_cs=FAO&element=2111&item=1072&year=1961,1962,1963,1964,1965,1966,1967,1968,1969,1970,1971,1972,1973,1974,1975,1976,1977,1978,1979,1980,1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018&show_codes=true&show_unit=true&show_flags=true&null_values=false&output_type=objects",
+                            "type": "csv",
+                            "hideSource": true,
+                            "initialTimeSource": "2015",
+                            "tableStyle": {
+                                "featureInfoFields": [
+                                    "Area",
+                                    "Year",
+                                    "Value",
+                                    "Unit",
+                                    "Flag Description",
+                                    "Note"
+                                ],
+                                "dataVariable": "Value",
+                                "columns": {
+                                    "Domain": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Domain Code": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Area": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Element Code": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Element": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Item Code": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Item": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Year Code": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Unit": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Flag Description": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Note": {
+                                        "type": "HIDDEN"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "name": "Pigeons, other birds",
+                            "id": "faostat-QA-elem-2111-item-1083",
+                            "url": "https://api.data.apps.fao.org/api/v1/json_to_csv/http://fenixservices.fao.org/faostat/api/v1/en/data/QA?area=2,3,4,5,6,7,8,9,1,10,11,52,12,13,16,14,57,255,23,53,17,18,19,80,20,21,26,27,233,29,35,115,32,33,37,39,40,351,96,128,214,41,44,45,46,47,48,98,49,50,167,107,116,250,54,72,55,56,58,59,60,61,178,63,209,238,66,67,68,70,74,75,73,79,81,84,85,86,89,90,175,91,93,95,97,99,100,101,102,103,104,105,106,109,110,112,108,114,83,118,113,120,119,121,122,123,124,126,256,129,130,131,132,133,134,127,136,137,138,145,141,273,143,144,28,147,148,149,150,153,156,157,158,159,160,154,162,221,165,180,299,166,168,169,170,171,173,174,177,179,117,146,183,185,184,188,189,191,244,193,194,195,272,196,197,200,199,198,25,201,202,277,203,38,276,207,210,211,212,208,216,176,217,218,219,220,222,223,213,227,226,230,225,229,215,231,234,235,155,236,237,249,251,181&area_cs=FAO&element=2111&item=1083&year=1961,1962,1963,1964,1965,1966,1967,1968,1969,1970,1971,1972,1973,1974,1975,1976,1977,1978,1979,1980,1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018&show_codes=true&show_unit=true&show_flags=true&null_values=false&output_type=objects",
+                            "type": "csv",
+                            "hideSource": true,
+                            "initialTimeSource": "2015",
+                            "tableStyle": {
+                                "featureInfoFields": [
+                                    "Area",
+                                    "Year",
+                                    "Value",
+                                    "Unit",
+                                    "Flag Description",
+                                    "Note"
+                                ],
+                                "dataVariable": "Value",
+                                "columns": {
+                                    "Domain": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Domain Code": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Area": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Element Code": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Element": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Item Code": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Item": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Year Code": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Unit": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Flag Description": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Note": {
+                                        "type": "HIDDEN"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "name": "Turkeys",
+                            "id": "faostat-QA-elem-2111-item-1079",
+                            "url": "https://api.data.apps.fao.org/api/v1/json_to_csv/http://fenixservices.fao.org/faostat/api/v1/en/data/QA?area=2,3,4,5,6,7,8,9,1,10,11,52,12,13,16,14,57,255,23,53,17,18,19,80,20,21,26,27,233,29,35,115,32,33,37,39,40,351,96,128,214,41,44,45,46,47,48,98,49,50,167,107,116,250,54,72,55,56,58,59,60,61,178,63,209,238,66,67,68,70,74,75,73,79,81,84,85,86,89,90,175,91,93,95,97,99,100,101,102,103,104,105,106,109,110,112,108,114,83,118,113,120,119,121,122,123,124,126,256,129,130,131,132,133,134,127,136,137,138,145,141,273,143,144,28,147,148,149,150,153,156,157,158,159,160,154,162,221,165,180,299,166,168,169,170,171,173,174,177,179,117,146,183,185,184,188,189,191,244,193,194,195,272,196,197,200,199,198,25,201,202,277,203,38,276,207,210,211,212,208,216,176,217,218,219,220,222,223,213,227,226,230,225,229,215,231,234,235,155,236,237,249,251,181&area_cs=FAO&element=2111&item=1079&year=1961,1962,1963,1964,1965,1966,1967,1968,1969,1970,1971,1972,1973,1974,1975,1976,1977,1978,1979,1980,1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018&show_codes=true&show_unit=true&show_flags=true&null_values=false&output_type=objects",
+                            "type": "csv",
+                            "hideSource": true,
+                            "initialTimeSource": "2015",
+                            "tableStyle": {
+                                "featureInfoFields": [
+                                    "Area",
+                                    "Year",
+                                    "Value",
+                                    "Unit",
+                                    "Flag Description",
+                                    "Note"
+                                ],
+                                "dataVariable": "Value",
+                                "columns": {
+                                    "Domain": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Domain Code": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Area": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Element Code": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Element": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Item Code": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Item": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Year Code": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Unit": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Flag Description": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Note": {
+                                        "type": "HIDDEN"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Rabbits and hares",
+                    "id": "faostat-QA-elem-2111-item-1140",
+                    "url": "https://api.data.apps.fao.org/api/v1/json_to_csv/http://fenixservices.fao.org/faostat/api/v1/en/data/QA?area=2,3,4,5,6,7,8,9,1,10,11,52,12,13,16,14,57,255,23,53,17,18,19,80,20,21,26,27,233,29,35,115,32,33,37,39,40,351,96,128,214,41,44,45,46,47,48,98,49,50,167,107,116,250,54,72,55,56,58,59,60,61,178,63,209,238,66,67,68,70,74,75,73,79,81,84,85,86,89,90,175,91,93,95,97,99,100,101,102,103,104,105,106,109,110,112,108,114,83,118,113,120,119,121,122,123,124,126,256,129,130,131,132,133,134,127,136,137,138,145,141,273,143,144,28,147,148,149,150,153,156,157,158,159,160,154,162,221,165,180,299,166,168,169,170,171,173,174,177,179,117,146,183,185,184,188,189,191,244,193,194,195,272,196,197,200,199,198,25,201,202,277,203,38,276,207,210,211,212,208,216,176,217,218,219,220,222,223,213,227,226,230,225,229,215,231,234,235,155,236,237,249,251,181&area_cs=FAO&element=2111&item=1140&year=1961,1962,1963,1964,1965,1966,1967,1968,1969,1970,1971,1972,1973,1974,1975,1976,1977,1978,1979,1980,1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018&show_codes=true&show_unit=true&show_flags=true&null_values=false&output_type=objects",
+                    "type": "csv",
+                    "hideSource": true,
+                    "initialTimeSource": "2015",
+                    "tableStyle": {
+                        "featureInfoFields": [
+                            "Area",
+                            "Year",
+                            "Value",
+                            "Unit",
+                            "Flag Description",
+                            "Note"
+                        ],
+                        "dataVariable": "Value",
+                        "columns": {
+                            "Domain": {
+                                "type": "HIDDEN"
+                            },
+                            "Domain Code": {
+                                "type": "HIDDEN"
+                            },
+                            "Area": {
+                                "type": "HIDDEN"
+                            },
+                            "Element Code": {
+                                "type": "HIDDEN"
+                            },
+                            "Element": {
+                                "type": "HIDDEN"
+                            },
+                            "Item Code": {
+                                "type": "HIDDEN"
+                            },
+                            "Item": {
+                                "type": "HIDDEN"
+                            },
+                            "Year Code": {
+                                "type": "HIDDEN"
+                            },
+                            "Unit": {
+                                "type": "HIDDEN"
+                            },
+                            "Flag Description": {
+                                "type": "HIDDEN"
+                            },
+                            "Note": {
+                                "type": "HIDDEN"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "Rodents, other",
+                    "id": "faostat-QA-elem-2111-item-1150",
+                    "url": "https://api.data.apps.fao.org/api/v1/json_to_csv/http://fenixservices.fao.org/faostat/api/v1/en/data/QA?area=2,3,4,5,6,7,8,9,1,10,11,52,12,13,16,14,57,255,23,53,17,18,19,80,20,21,26,27,233,29,35,115,32,33,37,39,40,351,96,128,214,41,44,45,46,47,48,98,49,50,167,107,116,250,54,72,55,56,58,59,60,61,178,63,209,238,66,67,68,70,74,75,73,79,81,84,85,86,89,90,175,91,93,95,97,99,100,101,102,103,104,105,106,109,110,112,108,114,83,118,113,120,119,121,122,123,124,126,256,129,130,131,132,133,134,127,136,137,138,145,141,273,143,144,28,147,148,149,150,153,156,157,158,159,160,154,162,221,165,180,299,166,168,169,170,171,173,174,177,179,117,146,183,185,184,188,189,191,244,193,194,195,272,196,197,200,199,198,25,201,202,277,203,38,276,207,210,211,212,208,216,176,217,218,219,220,222,223,213,227,226,230,225,229,215,231,234,235,155,236,237,249,251,181&area_cs=FAO&element=2111&item=1150&year=1961,1962,1963,1964,1965,1966,1967,1968,1969,1970,1971,1972,1973,1974,1975,1976,1977,1978,1979,1980,1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018&show_codes=true&show_unit=true&show_flags=true&null_values=false&output_type=objects",
+                    "type": "csv",
+                    "hideSource": true,
+                    "initialTimeSource": "2015",
+                    "tableStyle": {
+                        "featureInfoFields": [
+                            "Area",
+                            "Year",
+                            "Value",
+                            "Unit",
+                            "Flag Description",
+                            "Note"
+                        ],
+                        "dataVariable": "Value",
+                        "columns": {
+                            "Domain": {
+                                "type": "HIDDEN"
+                            },
+                            "Domain Code": {
+                                "type": "HIDDEN"
+                            },
+                            "Area": {
+                                "type": "HIDDEN"
+                            },
+                            "Element Code": {
+                                "type": "HIDDEN"
+                            },
+                            "Element": {
+                                "type": "HIDDEN"
+                            },
+                            "Item Code": {
+                                "type": "HIDDEN"
+                            },
+                            "Item": {
+                                "type": "HIDDEN"
+                            },
+                            "Year Code": {
+                                "type": "HIDDEN"
+                            },
+                            "Unit": {
+                                "type": "HIDDEN"
+                            },
+                            "Flag Description": {
+                                "type": "HIDDEN"
+                            },
+                            "Note": {
+                                "type": "HIDDEN"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "Sheep and Goats",
+                    "type": "group",
+                    "preserveOrder": true,
+                    "items": [
+                        {
+                            "name": "Sheep and Goats",
+                            "id": "faostat-QA-elem-2111-item-1749",
+                            "url": "https://api.data.apps.fao.org/api/v1/json_to_csv/http://fenixservices.fao.org/faostat/api/v1/en/data/QA?area=2,3,4,5,6,7,8,9,1,10,11,52,12,13,16,14,57,255,23,53,17,18,19,80,20,21,26,27,233,29,35,115,32,33,37,39,40,351,96,128,214,41,44,45,46,47,48,98,49,50,167,107,116,250,54,72,55,56,58,59,60,61,178,63,209,238,66,67,68,70,74,75,73,79,81,84,85,86,89,90,175,91,93,95,97,99,100,101,102,103,104,105,106,109,110,112,108,114,83,118,113,120,119,121,122,123,124,126,256,129,130,131,132,133,134,127,136,137,138,145,141,273,143,144,28,147,148,149,150,153,156,157,158,159,160,154,162,221,165,180,299,166,168,169,170,171,173,174,177,179,117,146,183,185,184,188,189,191,244,193,194,195,272,196,197,200,199,198,25,201,202,277,203,38,276,207,210,211,212,208,216,176,217,218,219,220,222,223,213,227,226,230,225,229,215,231,234,235,155,236,237,249,251,181&area_cs=FAO&element=2111&item=1749&year=1961,1962,1963,1964,1965,1966,1967,1968,1969,1970,1971,1972,1973,1974,1975,1976,1977,1978,1979,1980,1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018&show_codes=true&show_unit=true&show_flags=true&null_values=false&output_type=objects",
+                            "type": "csv",
+                            "hideSource": true,
+                            "initialTimeSource": "2015",
+                            "tableStyle": {
+                                "featureInfoFields": [
+                                    "Area",
+                                    "Year",
+                                    "Value",
+                                    "Unit",
+                                    "Flag Description",
+                                    "Note"
+                                ],
+                                "dataVariable": "Value",
+                                "columns": {
+                                    "Domain": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Domain Code": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Area": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Element Code": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Element": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Item Code": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Item": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Year Code": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Unit": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Flag Description": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Note": {
+                                        "type": "HIDDEN"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "name": "Sheep",
+                            "id": "faostat-QA-elem-2111-item-976",
+                            "url": "https://api.data.apps.fao.org/api/v1/json_to_csv/http://fenixservices.fao.org/faostat/api/v1/en/data/QA?area=2,3,4,5,6,7,8,9,1,10,11,52,12,13,16,14,57,255,23,53,17,18,19,80,20,21,26,27,233,29,35,115,32,33,37,39,40,351,96,128,214,41,44,45,46,47,48,98,49,50,167,107,116,250,54,72,55,56,58,59,60,61,178,63,209,238,66,67,68,70,74,75,73,79,81,84,85,86,89,90,175,91,93,95,97,99,100,101,102,103,104,105,106,109,110,112,108,114,83,118,113,120,119,121,122,123,124,126,256,129,130,131,132,133,134,127,136,137,138,145,141,273,143,144,28,147,148,149,150,153,156,157,158,159,160,154,162,221,165,180,299,166,168,169,170,171,173,174,177,179,117,146,183,185,184,188,189,191,244,193,194,195,272,196,197,200,199,198,25,201,202,277,203,38,276,207,210,211,212,208,216,176,217,218,219,220,222,223,213,227,226,230,225,229,215,231,234,235,155,236,237,249,251,181&area_cs=FAO&element=2111&item=976&year=1961,1962,1963,1964,1965,1966,1967,1968,1969,1970,1971,1972,1973,1974,1975,1976,1977,1978,1979,1980,1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018&show_codes=true&show_unit=true&show_flags=true&null_values=false&output_type=objects",
+                            "type": "csv",
+                            "hideSource": true,
+                            "initialTimeSource": "2015",
+                            "tableStyle": {
+                                "featureInfoFields": [
+                                    "Area",
+                                    "Year",
+                                    "Value",
+                                    "Unit",
+                                    "Flag Description",
+                                    "Note"
+                                ],
+                                "dataVariable": "Value",
+                                "columns": {
+                                    "Domain": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Domain Code": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Area": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Element Code": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Element": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Item Code": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Item": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Year Code": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Unit": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Flag Description": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Note": {
+                                        "type": "HIDDEN"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "name": "Goats",
+                            "id": "faostat-QA-elem-2111-item-1016",
+                            "url": "https://api.data.apps.fao.org/api/v1/json_to_csv/http://fenixservices.fao.org/faostat/api/v1/en/data/QA?area=2,3,4,5,6,7,8,9,1,10,11,52,12,13,16,14,57,255,23,53,17,18,19,80,20,21,26,27,233,29,35,115,32,33,37,39,40,351,96,128,214,41,44,45,46,47,48,98,49,50,167,107,116,250,54,72,55,56,58,59,60,61,178,63,209,238,66,67,68,70,74,75,73,79,81,84,85,86,89,90,175,91,93,95,97,99,100,101,102,103,104,105,106,109,110,112,108,114,83,118,113,120,119,121,122,123,124,126,256,129,130,131,132,133,134,127,136,137,138,145,141,273,143,144,28,147,148,149,150,153,156,157,158,159,160,154,162,221,165,180,299,166,168,169,170,171,173,174,177,179,117,146,183,185,184,188,189,191,244,193,194,195,272,196,197,200,199,198,25,201,202,277,203,38,276,207,210,211,212,208,216,176,217,218,219,220,222,223,213,227,226,230,225,229,215,231,234,235,155,236,237,249,251,181&area_cs=FAO&element=2111&item=1016&year=1961,1962,1963,1964,1965,1966,1967,1968,1969,1970,1971,1972,1973,1974,1975,1976,1977,1978,1979,1980,1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018&show_codes=true&show_unit=true&show_flags=true&null_values=false&output_type=objects",
+                            "type": "csv",
+                            "hideSource": true,
+                            "initialTimeSource": "2015",
+                            "tableStyle": {
+                                "featureInfoFields": [
+                                    "Area",
+                                    "Year",
+                                    "Value",
+                                    "Unit",
+                                    "Flag Description",
+                                    "Note"
+                                ],
+                                "dataVariable": "Value",
+                                "columns": {
+                                    "Domain": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Domain Code": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Area": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Element Code": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Element": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Item Code": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Item": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Year Code": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Unit": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Flag Description": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "Note": {
+                                        "type": "HIDDEN"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "National",
+            "type": "group",
+            "order": 1,
+            "preserveOrder": true,
+            "items": [
+                {
+                    "name": "Angola - Animal Production - (Admin 1)",
+                    "type": "group",
+                    "description": "This shows Animal Production Data for Angola",
+                    "items": [
+                        {
+                            "description": "This shows data Female Live Animals in Angola",
+                            "items": [
+                                {
+                                    "description": "This shows Animal data for Angola for Goats",
+                                    "name": "Goats",
+                                    "tableStyle": {
+                                        "columns": {
+                                            "Flag_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Flag_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Indicator_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Indicator_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Level_administrative_1_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Level_administrative_1_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Species_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Species_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Unit_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Unit_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Value": {
+                                                "type": "active"
+                                            },
+                                            "name_1": {
+                                                "type": "HIDDEN"
+                                            }
+                                        },
+                                        "dataVariable": "Value",
+                                        "featureInfoFields": {
+                                            "Flag_code": "Flag Code",
+                                            "Flag_des": "Flag Name",
+                                            "Indicator_code": "Indicator Code",
+                                            "Indicator_des": "Indicator Name",
+                                            "Level_administrative_1_code": "Administrative level 1 code",
+                                            "Level_administrative_1_des": "Administrative level 1 Name",
+                                            "Species_code": "Species Code",
+                                            "Species_des": "Species Name",
+                                            "Unit_code": "Unit Code",
+                                            "Unit_des": "Unit",
+                                            "Value": "Value",
+                                            "Year": "Year",
+                                            "gid_1": "gid_1",
+                                            "name_1": "name_1"
+                                        }
+                                    },
+                                    "type": "csv",
+                                    "url": "https://api.data.apps.fao.org/api/v1/bigquery?query=SELECT+DISTINCT+b.gid_1+%2Cb.name_1+%2C+a.%2A+EXCEPT+%28__bigquery_upload_timestamp%29+FROM++%60fao-maps.fao_countrystat.fct_ago_D3S_59002929071142816785007996630712285971%60+a%2C+%60fao_countrystat.fct_ago_gadm36_1_mapping%60++b+where+a.Level_administrative_1_code+%3D+b.Administrative_level_1_code+and+Species_des+%3D+%22Goats%22+and+Indicator_des+%3D+%22Female+Live+Animals%22+ORDER+BY+Level_administrative_1_code%2C+Species_des%2C+Indicator_des%2C+Year"
+                                },
+                                {
+                                    "description": "This shows Animal data for Angola for Sheep",
+                                    "name": "Sheep",
+                                    "tableStyle": {
+                                        "columns": {
+                                            "Flag_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Flag_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Indicator_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Indicator_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Level_administrative_1_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Level_administrative_1_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Species_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Species_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Unit_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Unit_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Value": {
+                                                "type": "active"
+                                            },
+                                            "name_1": {
+                                                "type": "HIDDEN"
+                                            }
+                                        },
+                                        "dataVariable": "Value",
+                                        "featureInfoFields": {
+                                            "Flag_code": "Flag Code",
+                                            "Flag_des": "Flag Name",
+                                            "Indicator_code": "Indicator Code",
+                                            "Indicator_des": "Indicator Name",
+                                            "Level_administrative_1_code": "Administrative level 1 code",
+                                            "Level_administrative_1_des": "Administrative level 1 Name",
+                                            "Species_code": "Species Code",
+                                            "Species_des": "Species Name",
+                                            "Unit_code": "Unit Code",
+                                            "Unit_des": "Unit",
+                                            "Value": "Value",
+                                            "Year": "Year",
+                                            "gid_1": "gid_1",
+                                            "name_1": "name_1"
+                                        }
+                                    },
+                                    "type": "csv",
+                                    "url": "https://api.data.apps.fao.org/api/v1/bigquery?query=SELECT+DISTINCT+b.gid_1+%2Cb.name_1+%2C+a.%2A+EXCEPT+%28__bigquery_upload_timestamp%29+FROM++%60fao-maps.fao_countrystat.fct_ago_D3S_59002929071142816785007996630712285971%60+a%2C+%60fao_countrystat.fct_ago_gadm36_1_mapping%60++b+where+a.Level_administrative_1_code+%3D+b.Administrative_level_1_code+and+Species_des+%3D+%22Sheep%22+and+Indicator_des+%3D+%22Female+Live+Animals%22+ORDER+BY+Level_administrative_1_code%2C+Species_des%2C+Indicator_des%2C+Year"
+                                },
+                                {
+                                    "description": "This shows Animal data for Angola for Cattle",
+                                    "name": "Cattle",
+                                    "tableStyle": {
+                                        "columns": {
+                                            "Flag_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Flag_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Indicator_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Indicator_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Level_administrative_1_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Level_administrative_1_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Species_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Species_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Unit_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Unit_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Value": {
+                                                "type": "active"
+                                            },
+                                            "name_1": {
+                                                "type": "HIDDEN"
+                                            }
+                                        },
+                                        "dataVariable": "Value",
+                                        "featureInfoFields": {
+                                            "Flag_code": "Flag Code",
+                                            "Flag_des": "Flag Name",
+                                            "Indicator_code": "Indicator Code",
+                                            "Indicator_des": "Indicator Name",
+                                            "Level_administrative_1_code": "Administrative level 1 code",
+                                            "Level_administrative_1_des": "Administrative level 1 Name",
+                                            "Species_code": "Species Code",
+                                            "Species_des": "Species Name",
+                                            "Unit_code": "Unit Code",
+                                            "Unit_des": "Unit",
+                                            "Value": "Value",
+                                            "Year": "Year",
+                                            "gid_1": "gid_1",
+                                            "name_1": "name_1"
+                                        }
+                                    },
+                                    "type": "csv",
+                                    "url": "https://api.data.apps.fao.org/api/v1/bigquery?query=SELECT+DISTINCT+b.gid_1+%2Cb.name_1+%2C+a.%2A+EXCEPT+%28__bigquery_upload_timestamp%29+FROM++%60fao-maps.fao_countrystat.fct_ago_D3S_59002929071142816785007996630712285971%60+a%2C+%60fao_countrystat.fct_ago_gadm36_1_mapping%60++b+where+a.Level_administrative_1_code+%3D+b.Administrative_level_1_code+and+Species_des+%3D+%22Cattle%22+and+Indicator_des+%3D+%22Female+Live+Animals%22+ORDER+BY+Level_administrative_1_code%2C+Species_des%2C+Indicator_des%2C+Year"
+                                },
+                                {
+                                    "description": "This shows Animal data for Angola for Chickens",
+                                    "name": "Chickens",
+                                    "tableStyle": {
+                                        "columns": {
+                                            "Flag_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Flag_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Indicator_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Indicator_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Level_administrative_1_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Level_administrative_1_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Species_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Species_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Unit_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Unit_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Value": {
+                                                "type": "active"
+                                            },
+                                            "name_1": {
+                                                "type": "HIDDEN"
+                                            }
+                                        },
+                                        "dataVariable": "Value",
+                                        "featureInfoFields": {
+                                            "Flag_code": "Flag Code",
+                                            "Flag_des": "Flag Name",
+                                            "Indicator_code": "Indicator Code",
+                                            "Indicator_des": "Indicator Name",
+                                            "Level_administrative_1_code": "Administrative level 1 code",
+                                            "Level_administrative_1_des": "Administrative level 1 Name",
+                                            "Species_code": "Species Code",
+                                            "Species_des": "Species Name",
+                                            "Unit_code": "Unit Code",
+                                            "Unit_des": "Unit",
+                                            "Value": "Value",
+                                            "Year": "Year",
+                                            "gid_1": "gid_1",
+                                            "name_1": "name_1"
+                                        }
+                                    },
+                                    "type": "csv",
+                                    "url": "https://api.data.apps.fao.org/api/v1/bigquery?query=SELECT+DISTINCT+b.gid_1+%2Cb.name_1+%2C+a.%2A+EXCEPT+%28__bigquery_upload_timestamp%29+FROM++%60fao-maps.fao_countrystat.fct_ago_D3S_59002929071142816785007996630712285971%60+a%2C+%60fao_countrystat.fct_ago_gadm36_1_mapping%60++b+where+a.Level_administrative_1_code+%3D+b.Administrative_level_1_code+and+Species_des+%3D+%22Chickens%22+and+Indicator_des+%3D+%22Female+Live+Animals%22+ORDER+BY+Level_administrative_1_code%2C+Species_des%2C+Indicator_des%2C+Year"
+                                },
+                                {
+                                    "description": "This shows Animal data for Angola for Swine / pigs",
+                                    "name": "Swine / pigs",
+                                    "tableStyle": {
+                                        "columns": {
+                                            "Flag_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Flag_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Indicator_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Indicator_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Level_administrative_1_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Level_administrative_1_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Species_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Species_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Unit_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Unit_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Value": {
+                                                "type": "active"
+                                            },
+                                            "name_1": {
+                                                "type": "HIDDEN"
+                                            }
+                                        },
+                                        "dataVariable": "Value",
+                                        "featureInfoFields": {
+                                            "Flag_code": "Flag Code",
+                                            "Flag_des": "Flag Name",
+                                            "Indicator_code": "Indicator Code",
+                                            "Indicator_des": "Indicator Name",
+                                            "Level_administrative_1_code": "Administrative level 1 code",
+                                            "Level_administrative_1_des": "Administrative level 1 Name",
+                                            "Species_code": "Species Code",
+                                            "Species_des": "Species Name",
+                                            "Unit_code": "Unit Code",
+                                            "Unit_des": "Unit",
+                                            "Value": "Value",
+                                            "Year": "Year",
+                                            "gid_1": "gid_1",
+                                            "name_1": "name_1"
+                                        }
+                                    },
+                                    "type": "csv",
+                                    "url": "https://api.data.apps.fao.org/api/v1/bigquery?query=SELECT+DISTINCT+b.gid_1+%2Cb.name_1+%2C+a.%2A+EXCEPT+%28__bigquery_upload_timestamp%29+FROM++%60fao-maps.fao_countrystat.fct_ago_D3S_59002929071142816785007996630712285971%60+a%2C+%60fao_countrystat.fct_ago_gadm36_1_mapping%60++b+where+a.Level_administrative_1_code+%3D+b.Administrative_level_1_code+and+Species_des+%3D+%22Swine+%2F+pigs%22+and+Indicator_des+%3D+%22Female+Live+Animals%22+ORDER+BY+Level_administrative_1_code%2C+Species_des%2C+Indicator_des%2C+Year"
+                                }
+                            ],
+                            "name": "Female Live Animals",
+                            "type": "group"
+                        },
+                        {
+                            "description": "This shows data on Slaughtered Animals in Angola",
+                            "items": [
+                                {
+                                    "description": "This shows Animal data for Angola for Goats",
+                                    "name": "Goats",
+                                    "tableStyle": {
+                                        "columns": {
+                                            "Flag_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Flag_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Indicator_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Indicator_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Level_administrative_1_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Level_administrative_1_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Species_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Species_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Unit_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Unit_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Value": {
+                                                "type": "active"
+                                            },
+                                            "name_1": {
+                                                "type": "HIDDEN"
+                                            }
+                                        },
+                                        "dataVariable": "Value",
+                                        "featureInfoFields": {
+                                            "Flag_code": "Flag Code",
+                                            "Flag_des": "Flag Name",
+                                            "Indicator_code": "Indicator Code",
+                                            "Indicator_des": "Indicator Name",
+                                            "Level_administrative_1_code": "Administrative level 1 code",
+                                            "Level_administrative_1_des": "Administrative level 1 Name",
+                                            "Species_code": "Species Code",
+                                            "Species_des": "Species Name",
+                                            "Unit_code": "Unit Code",
+                                            "Unit_des": "Unit",
+                                            "Value": "Value",
+                                            "Year": "Year",
+                                            "gid_1": "gid_1",
+                                            "name_1": "name_1"
+                                        }
+                                    },
+                                    "type": "csv",
+                                    "url": "https://api.data.apps.fao.org/api/v1/bigquery?query=SELECT+DISTINCT+b.gid_1+%2Cb.name_1+%2C+a.%2A+EXCEPT+%28__bigquery_upload_timestamp%29+FROM++%60fao-maps.fao_countrystat.fct_ago_D3S_59002929071142816785007996630712285971%60+a%2C+%60fao_countrystat.fct_ago_gadm36_1_mapping%60++b+where+a.Level_administrative_1_code+%3D+b.Administrative_level_1_code+and+Species_des+%3D+%22Goats%22+and+Indicator_des+%3D+%22Slaughtered+animals%22+ORDER+BY+Level_administrative_1_code%2C+Species_des%2C+Indicator_des%2C+Year"
+                                },
+                                {
+                                    "description": "This shows Animal data for Angola for Sheep",
+                                    "name": "Sheep",
+                                    "tableStyle": {
+                                        "columns": {
+                                            "Flag_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Flag_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Indicator_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Indicator_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Level_administrative_1_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Level_administrative_1_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Species_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Species_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Unit_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Unit_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Value": {
+                                                "type": "active"
+                                            },
+                                            "name_1": {
+                                                "type": "HIDDEN"
+                                            }
+                                        },
+                                        "dataVariable": "Value",
+                                        "featureInfoFields": {
+                                            "Flag_code": "Flag Code",
+                                            "Flag_des": "Flag Name",
+                                            "Indicator_code": "Indicator Code",
+                                            "Indicator_des": "Indicator Name",
+                                            "Level_administrative_1_code": "Administrative level 1 code",
+                                            "Level_administrative_1_des": "Administrative level 1 Name",
+                                            "Species_code": "Species Code",
+                                            "Species_des": "Species Name",
+                                            "Unit_code": "Unit Code",
+                                            "Unit_des": "Unit",
+                                            "Value": "Value",
+                                            "Year": "Year",
+                                            "gid_1": "gid_1",
+                                            "name_1": "name_1"
+                                        }
+                                    },
+                                    "type": "csv",
+                                    "url": "https://api.data.apps.fao.org/api/v1/bigquery?query=SELECT+DISTINCT+b.gid_1+%2Cb.name_1+%2C+a.%2A+EXCEPT+%28__bigquery_upload_timestamp%29+FROM++%60fao-maps.fao_countrystat.fct_ago_D3S_59002929071142816785007996630712285971%60+a%2C+%60fao_countrystat.fct_ago_gadm36_1_mapping%60++b+where+a.Level_administrative_1_code+%3D+b.Administrative_level_1_code+and+Species_des+%3D+%22Sheep%22+and+Indicator_des+%3D+%22Slaughtered+animals%22+ORDER+BY+Level_administrative_1_code%2C+Species_des%2C+Indicator_des%2C+Year"
+                                },
+                                {
+                                    "description": "This shows Animal data for Angola for Cattle",
+                                    "name": "Cattle",
+                                    "tableStyle": {
+                                        "columns": {
+                                            "Flag_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Flag_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Indicator_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Indicator_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Level_administrative_1_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Level_administrative_1_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Species_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Species_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Unit_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Unit_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Value": {
+                                                "type": "active"
+                                            },
+                                            "name_1": {
+                                                "type": "HIDDEN"
+                                            }
+                                        },
+                                        "dataVariable": "Value",
+                                        "featureInfoFields": {
+                                            "Flag_code": "Flag Code",
+                                            "Flag_des": "Flag Name",
+                                            "Indicator_code": "Indicator Code",
+                                            "Indicator_des": "Indicator Name",
+                                            "Level_administrative_1_code": "Administrative level 1 code",
+                                            "Level_administrative_1_des": "Administrative level 1 Name",
+                                            "Species_code": "Species Code",
+                                            "Species_des": "Species Name",
+                                            "Unit_code": "Unit Code",
+                                            "Unit_des": "Unit",
+                                            "Value": "Value",
+                                            "Year": "Year",
+                                            "gid_1": "gid_1",
+                                            "name_1": "name_1"
+                                        }
+                                    },
+                                    "type": "csv",
+                                    "url": "https://api.data.apps.fao.org/api/v1/bigquery?query=SELECT+DISTINCT+b.gid_1+%2Cb.name_1+%2C+a.%2A+EXCEPT+%28__bigquery_upload_timestamp%29+FROM++%60fao-maps.fao_countrystat.fct_ago_D3S_59002929071142816785007996630712285971%60+a%2C+%60fao_countrystat.fct_ago_gadm36_1_mapping%60++b+where+a.Level_administrative_1_code+%3D+b.Administrative_level_1_code+and+Species_des+%3D+%22Cattle%22+and+Indicator_des+%3D+%22Slaughtered+animals%22+ORDER+BY+Level_administrative_1_code%2C+Species_des%2C+Indicator_des%2C+Year"
+                                },
+                                {
+                                    "description": "This shows Animal data for Angola for Chickens",
+                                    "name": "Chickens",
+                                    "tableStyle": {
+                                        "columns": {
+                                            "Flag_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Flag_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Indicator_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Indicator_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Level_administrative_1_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Level_administrative_1_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Species_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Species_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Unit_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Unit_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Value": {
+                                                "type": "active"
+                                            },
+                                            "name_1": {
+                                                "type": "HIDDEN"
+                                            }
+                                        },
+                                        "dataVariable": "Value",
+                                        "featureInfoFields": {
+                                            "Flag_code": "Flag Code",
+                                            "Flag_des": "Flag Name",
+                                            "Indicator_code": "Indicator Code",
+                                            "Indicator_des": "Indicator Name",
+                                            "Level_administrative_1_code": "Administrative level 1 code",
+                                            "Level_administrative_1_des": "Administrative level 1 Name",
+                                            "Species_code": "Species Code",
+                                            "Species_des": "Species Name",
+                                            "Unit_code": "Unit Code",
+                                            "Unit_des": "Unit",
+                                            "Value": "Value",
+                                            "Year": "Year",
+                                            "gid_1": "gid_1",
+                                            "name_1": "name_1"
+                                        }
+                                    },
+                                    "type": "csv",
+                                    "url": "https://api.data.apps.fao.org/api/v1/bigquery?query=SELECT+DISTINCT+b.gid_1+%2Cb.name_1+%2C+a.%2A+EXCEPT+%28__bigquery_upload_timestamp%29+FROM++%60fao-maps.fao_countrystat.fct_ago_D3S_59002929071142816785007996630712285971%60+a%2C+%60fao_countrystat.fct_ago_gadm36_1_mapping%60++b+where+a.Level_administrative_1_code+%3D+b.Administrative_level_1_code+and+Species_des+%3D+%22Chickens%22+and+Indicator_des+%3D+%22Slaughtered+animals%22+ORDER+BY+Level_administrative_1_code%2C+Species_des%2C+Indicator_des%2C+Year"
+                                },
+                                {
+                                    "description": "This shows Animal data for Angola for Swine / pigs",
+                                    "name": "Swine / pigs",
+                                    "tableStyle": {
+                                        "columns": {
+                                            "Flag_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Flag_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Indicator_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Indicator_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Level_administrative_1_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Level_administrative_1_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Species_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Species_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Unit_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Unit_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Value": {
+                                                "type": "active"
+                                            },
+                                            "name_1": {
+                                                "type": "HIDDEN"
+                                            }
+                                        },
+                                        "dataVariable": "Value",
+                                        "featureInfoFields": {
+                                            "Flag_code": "Flag Code",
+                                            "Flag_des": "Flag Name",
+                                            "Indicator_code": "Indicator Code",
+                                            "Indicator_des": "Indicator Name",
+                                            "Level_administrative_1_code": "Administrative level 1 code",
+                                            "Level_administrative_1_des": "Administrative level 1 Name",
+                                            "Species_code": "Species Code",
+                                            "Species_des": "Species Name",
+                                            "Unit_code": "Unit Code",
+                                            "Unit_des": "Unit",
+                                            "Value": "Value",
+                                            "Year": "Year",
+                                            "gid_1": "gid_1",
+                                            "name_1": "name_1"
+                                        }
+                                    },
+                                    "type": "csv",
+                                    "url": "https://api.data.apps.fao.org/api/v1/bigquery?query=SELECT+DISTINCT+b.gid_1+%2Cb.name_1+%2C+a.%2A+EXCEPT+%28__bigquery_upload_timestamp%29+FROM++%60fao-maps.fao_countrystat.fct_ago_D3S_59002929071142816785007996630712285971%60+a%2C+%60fao_countrystat.fct_ago_gadm36_1_mapping%60++b+where+a.Level_administrative_1_code+%3D+b.Administrative_level_1_code+and+Species_des+%3D+%22Swine+%2F+pigs%22+and+Indicator_des+%3D+%22Slaughtered+animals%22+ORDER+BY+Level_administrative_1_code%2C+Species_des%2C+Indicator_des%2C+Year"
+                                }
+                            ],
+                            "name": "Slaughtered animals",
+                            "type": "group"
+                        },
+                        {
+                            "description": "This shows data on Live Animals in Angola",
+                            "items": [
+                                {
+                                    "description": "This shows Animal data for Angola for Goats",
+                                    "name": "Goats",
+                                    "tableStyle": {
+                                        "columns": {
+                                            "Flag_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Flag_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Indicator_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Indicator_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Level_administrative_1_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Level_administrative_1_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Species_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Species_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Unit_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Unit_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Value": {
+                                                "type": "active"
+                                            },
+                                            "name_1": {
+                                                "type": "HIDDEN"
+                                            }
+                                        },
+                                        "dataVariable": "Value",
+                                        "featureInfoFields": {
+                                            "Flag_code": "Flag Code",
+                                            "Flag_des": "Flag Name",
+                                            "Indicator_code": "Indicator Code",
+                                            "Indicator_des": "Indicator Name",
+                                            "Level_administrative_1_code": "Administrative level 1 code",
+                                            "Level_administrative_1_des": "Administrative level 1 Name",
+                                            "Species_code": "Species Code",
+                                            "Species_des": "Species Name",
+                                            "Unit_code": "Unit Code",
+                                            "Unit_des": "Unit",
+                                            "Value": "Value",
+                                            "Year": "Year",
+                                            "gid_1": "gid_1",
+                                            "name_1": "name_1"
+                                        }
+                                    },
+                                    "type": "csv",
+                                    "url": "https://api.data.apps.fao.org/api/v1/bigquery?query=SELECT+DISTINCT+b.gid_1+%2Cb.name_1+%2C+a.%2A+EXCEPT+%28__bigquery_upload_timestamp%29+FROM++%60fao-maps.fao_countrystat.fct_ago_D3S_59002929071142816785007996630712285971%60+a%2C+%60fao_countrystat.fct_ago_gadm36_1_mapping%60++b+where+a.Level_administrative_1_code+%3D+b.Administrative_level_1_code+and+Species_des+%3D+%22Goats%22+and+Indicator_des+%3D+%22Live+animals%22+ORDER+BY+Level_administrative_1_code%2C+Species_des%2C+Indicator_des%2C+Year"
+                                },
+                                {
+                                    "description": "This shows Animal data for Angola for Sheep",
+                                    "name": "Sheep",
+                                    "tableStyle": {
+                                        "columns": {
+                                            "Flag_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Flag_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Indicator_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Indicator_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Level_administrative_1_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Level_administrative_1_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Species_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Species_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Unit_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Unit_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Value": {
+                                                "type": "active"
+                                            },
+                                            "name_1": {
+                                                "type": "HIDDEN"
+                                            }
+                                        },
+                                        "dataVariable": "Value",
+                                        "featureInfoFields": {
+                                            "Flag_code": "Flag Code",
+                                            "Flag_des": "Flag Name",
+                                            "Indicator_code": "Indicator Code",
+                                            "Indicator_des": "Indicator Name",
+                                            "Level_administrative_1_code": "Administrative level 1 code",
+                                            "Level_administrative_1_des": "Administrative level 1 Name",
+                                            "Species_code": "Species Code",
+                                            "Species_des": "Species Name",
+                                            "Unit_code": "Unit Code",
+                                            "Unit_des": "Unit",
+                                            "Value": "Value",
+                                            "Year": "Year",
+                                            "gid_1": "gid_1",
+                                            "name_1": "name_1"
+                                        }
+                                    },
+                                    "type": "csv",
+                                    "url": "https://api.data.apps.fao.org/api/v1/bigquery?query=SELECT+DISTINCT+b.gid_1+%2Cb.name_1+%2C+a.%2A+EXCEPT+%28__bigquery_upload_timestamp%29+FROM++%60fao-maps.fao_countrystat.fct_ago_D3S_59002929071142816785007996630712285971%60+a%2C+%60fao_countrystat.fct_ago_gadm36_1_mapping%60++b+where+a.Level_administrative_1_code+%3D+b.Administrative_level_1_code+and+Species_des+%3D+%22Sheep%22+and+Indicator_des+%3D+%22Live+animals%22+ORDER+BY+Level_administrative_1_code%2C+Species_des%2C+Indicator_des%2C+Year"
+                                },
+                                {
+                                    "description": "This shows Animal data for Angola for Cattle",
+                                    "name": "Cattle",
+                                    "tableStyle": {
+                                        "columns": {
+                                            "Flag_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Flag_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Indicator_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Indicator_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Level_administrative_1_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Level_administrative_1_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Species_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Species_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Unit_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Unit_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Value": {
+                                                "type": "active"
+                                            },
+                                            "name_1": {
+                                                "type": "HIDDEN"
+                                            }
+                                        },
+                                        "dataVariable": "Value",
+                                        "featureInfoFields": {
+                                            "Flag_code": "Flag Code",
+                                            "Flag_des": "Flag Name",
+                                            "Indicator_code": "Indicator Code",
+                                            "Indicator_des": "Indicator Name",
+                                            "Level_administrative_1_code": "Administrative level 1 code",
+                                            "Level_administrative_1_des": "Administrative level 1 Name",
+                                            "Species_code": "Species Code",
+                                            "Species_des": "Species Name",
+                                            "Unit_code": "Unit Code",
+                                            "Unit_des": "Unit",
+                                            "Value": "Value",
+                                            "Year": "Year",
+                                            "gid_1": "gid_1",
+                                            "name_1": "name_1"
+                                        }
+                                    },
+                                    "type": "csv",
+                                    "url": "https://api.data.apps.fao.org/api/v1/bigquery?query=SELECT+DISTINCT+b.gid_1+%2Cb.name_1+%2C+a.%2A+EXCEPT+%28__bigquery_upload_timestamp%29+FROM++%60fao-maps.fao_countrystat.fct_ago_D3S_59002929071142816785007996630712285971%60+a%2C+%60fao_countrystat.fct_ago_gadm36_1_mapping%60++b+where+a.Level_administrative_1_code+%3D+b.Administrative_level_1_code+and+Species_des+%3D+%22Cattle%22+and+Indicator_des+%3D+%22Live+animals%22+ORDER+BY+Level_administrative_1_code%2C+Species_des%2C+Indicator_des%2C+Year"
+                                },
+                                {
+                                    "description": "This shows Animal data for Angola for Chickens",
+                                    "name": "Chickens",
+                                    "tableStyle": {
+                                        "columns": {
+                                            "Flag_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Flag_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Indicator_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Indicator_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Level_administrative_1_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Level_administrative_1_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Species_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Species_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Unit_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Unit_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Value": {
+                                                "type": "active"
+                                            },
+                                            "name_1": {
+                                                "type": "HIDDEN"
+                                            }
+                                        },
+                                        "dataVariable": "Value",
+                                        "featureInfoFields": {
+                                            "Flag_code": "Flag Code",
+                                            "Flag_des": "Flag Name",
+                                            "Indicator_code": "Indicator Code",
+                                            "Indicator_des": "Indicator Name",
+                                            "Level_administrative_1_code": "Administrative level 1 code",
+                                            "Level_administrative_1_des": "Administrative level 1 Name",
+                                            "Species_code": "Species Code",
+                                            "Species_des": "Species Name",
+                                            "Unit_code": "Unit Code",
+                                            "Unit_des": "Unit",
+                                            "Value": "Value",
+                                            "Year": "Year",
+                                            "gid_1": "gid_1",
+                                            "name_1": "name_1"
+                                        }
+                                    },
+                                    "type": "csv",
+                                    "url": "https://api.data.apps.fao.org/api/v1/bigquery?query=SELECT+DISTINCT+b.gid_1+%2Cb.name_1+%2C+a.%2A+EXCEPT+%28__bigquery_upload_timestamp%29+FROM++%60fao-maps.fao_countrystat.fct_ago_D3S_59002929071142816785007996630712285971%60+a%2C+%60fao_countrystat.fct_ago_gadm36_1_mapping%60++b+where+a.Level_administrative_1_code+%3D+b.Administrative_level_1_code+and+Species_des+%3D+%22Chickens%22+and+Indicator_des+%3D+%22Live+animals%22+ORDER+BY+Level_administrative_1_code%2C+Species_des%2C+Indicator_des%2C+Year"
+                                },
+                                {
+                                    "description": "This shows Animal data for Angola for Swine / pigs",
+                                    "name": "Swine / pigs",
+                                    "tableStyle": {
+                                        "columns": {
+                                            "Flag_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Flag_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Indicator_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Indicator_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Level_administrative_1_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Level_administrative_1_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Species_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Species_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Unit_code": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Unit_des": {
+                                                "type": "HIDDEN"
+                                            },
+                                            "Value": {
+                                                "type": "active"
+                                            },
+                                            "name_1": {
+                                                "type": "HIDDEN"
+                                            }
+                                        },
+                                        "dataVariable": "Value",
+                                        "featureInfoFields": {
+                                            "Flag_code": "Flag Code",
+                                            "Flag_des": "Flag Name",
+                                            "Indicator_code": "Indicator Code",
+                                            "Indicator_des": "Indicator Name",
+                                            "Level_administrative_1_code": "Administrative level 1 code",
+                                            "Level_administrative_1_des": "Administrative level 1 Name",
+                                            "Species_code": "Species Code",
+                                            "Species_des": "Species Name",
+                                            "Unit_code": "Unit Code",
+                                            "Unit_des": "Unit",
+                                            "Value": "Value",
+                                            "Year": "Year",
+                                            "gid_1": "gid_1",
+                                            "name_1": "name_1"
+                                        }
+                                    },
+                                    "type": "csv",
+                                    "url": "https://api.data.apps.fao.org/api/v1/bigquery?query=SELECT+DISTINCT+b.gid_1+%2Cb.name_1+%2C+a.%2A+EXCEPT+%28__bigquery_upload_timestamp%29+FROM++%60fao-maps.fao_countrystat.fct_ago_D3S_59002929071142816785007996630712285971%60+a%2C+%60fao_countrystat.fct_ago_gadm36_1_mapping%60++b+where+a.Level_administrative_1_code+%3D+b.Administrative_level_1_code+and+Species_des+%3D+%22Swine+%2F+pigs%22+and+Indicator_des+%3D+%22Live+animals%22+ORDER+BY+Level_administrative_1_code%2C+Species_des%2C+Indicator_des%2C+Year"
+                                }
+                            ],
+                            "name": "Live animals",
+                            "type": "group"
+                        }
+                    ]
+                },
+                {
+                    "name": "Ethiopia",
+                    "id":"643a2efe-4dad-45f4-8693-b53df91f766a",
+                    "type": "csw",
+                    "getRecordsTemplate": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<csw:GetRecords xmlns:csw=\"http:\/\/www.opengis.net\/cat\/csw\/2.0.2\" version=\"2.0.2\" service=\"CSW\" resultType=\"results\" startPosition=\"1\" maxRecords=\"100\">\r\n    <csw:Query typeNames=\"csw:Record\" xmlns:ogc=\"http:\/\/www.opengis.net\/ogc\" xmlns:gml=\"http:\/\/www.opengis.net\/gml\">\r\n        <csw:ElementSetName>full<\/csw:ElementSetName>\r\n        <csw:Constraint version=\"1.1.0\">\r\n            <ogc:Filter>\r\n                    <ogc:PropertyIsEqualTo>\r\n                          <ogc:PropertyName>dc:identifier<\/ogc:PropertyName>\r\n                          <ogc:Literal>643a2efe-4dad-45f4-8693-b53df91f766a<\/ogc:Literal>\r\n                    <\/ogc:PropertyIsEqualTo>\r\n            <\/ogc:Filter>\r\n        <\/csw:Constraint>\r\n    <\/csw:Query>\r\n<\/csw:GetRecords>",
+                    "url": "https://data.apps.fao.org/map/catalog/srv/eng/csw",
+                    "baseLink": "https://data.apps.fao.org/map/catalog/srv/eng/catalog.search#/metadata/",
+                    "groupBy": "organization",
+                    "minimumMaxScaleDenominator": 10000000000,
+                    "filterByWmsGetCapabilities": false,
+                    "includeCsv": true,
+                    "includeGeoJson": true,
+                    "includeKml": true,
+                    "includeWms": true,
+                    "includeWfs": true,
+                    "includeEsriMapServer": true,
+                    "includeEsriFeatureServer": true,
+                    "itemProperties": {
+                        "featureInfoTemplate": {
+                            "template": "Total Milk Production (kg/year): <b>{{GRAY_INDEX}}</b>",
+                            "formats": {
+                                "GRAY_INDEX": {
+                                    "type": "number",
+                                    "maximumFractionDigits": 2
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "Haiti",
+                    "type": "group",
+                    "description": "haiti.md",
+                    "preserveOrder": true,
+                    "items": [
+                        {
+                            "name": "Livestock Population (2010 - numbers)",
+                            "id": "data/haiti/GLiPHA Livestock Population (2010 - numbers)",
+                            "url": "data/haiti/GLiPHA Livestock Population (2010 - numbers).csv",
+                            "type": "csv",
+                            "hideSource": true,
+                            "tableStyle": {
+                                "columns": {
+                                    "GID": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "__Département": {
+                                        "type": "HIDDEN"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "name": "Population de bétail de transport (2013 - Head) - Mules and hinnies)",
+                            "id": "haiti/CountrySTAT Haiti - Population de bétail de transport (2013 - Head) - Mules and hinnies",
+                            "url": "data/haiti/CountrySTAT Haiti - Population de bétail de transport (2013 - Head) - Mules and hinnies.csv",
+                            "type": "csv",
+                            "hideSource": true,
+                            "tableStyle": {
+                                "columns": {
+                                    "GID": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "__Département": {
+                                        "type": "HIDDEN"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "name": "Population de bétail de transport (2013 - Head) - Horses)",
+                            "id": "haiti/CountrySTAT Haiti - Population de bétail de transport (2013 - Head) - Horses",
+                            "url": "data/haiti/CountrySTAT Haiti - Population de bétail de transport (2013 - Head) - Horses.csv",
+                            "type": "csv",
+                            "hideSource": true,
+                            "tableStyle": {
+                                "columns": {
+                                    "GID": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "__Département": {
+                                        "type": "HIDDEN"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "name": "Population de bétail de transport (2013 - Head) - Asses)",
+                            "id": "haiti/CountrySTAT Haiti - Population de bétail de transport (2013 - Head) - Asses",
+                            "url": "data/haiti/CountrySTAT Haiti - Population de bétail de transport (2013 - Head) - Asses.csv",
+                            "type": "csv",
+                            "hideSource": true,
+                            "tableStyle": {
+                                "columns": {
+                                    "GID": {
+                                        "type": "HIDDEN"
+                                    },
+                                    "__Département": {
+                                        "type": "HIDDEN"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+} 

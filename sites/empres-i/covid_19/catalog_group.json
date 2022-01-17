@@ -1,0 +1,1426 @@
+{
+    "name": "Novel Coronavirus (COVID-19)",
+    "type": "group",
+    "order": 11,
+    "description": "covid_19.md",
+    "preserveOrder": true,
+    "items": [
+        {
+            "name": "COVID-19 crisis exposure",
+            "description": "[Catalog](/catalog/dataset/exposure-to-covid-19)\r\n",
+            "type": "group",
+            "preserveOrder": true,
+            "items": [
+                {
+                    "name": "Structural vulnerability of food systems to COVID-19 impacts",
+                    "type": "csv",
+                    "url": "https://data.apps.fao.org/catalog/dataset/47d47fb5-7cdd-4919-80bb-7c03af224b82/resource/aae5e3c4-7fc2-4988-933e-cbed832c2e46/download/exposure.csv",
+                    "tableStyle": {
+                        "dataVariable": "Structural Vulnerability",
+                        "colorBinMethod": "auto",
+                        "colorPalette": "4-class GnYlRd",
+                        "columns": {
+                            "Area": {
+                                "type": "HIDDEN"
+                            },
+                            "Structural Vulnerability": {
+                                "colorBins": [
+                                    {
+                                        "value": "Very high",
+                                        "color": "#08519c"                                        
+                                    },
+                                    {
+                                        "value": "High",
+                                        "color": "#3182bd"
+                                    },
+                                    {
+                                        "value": "Intermediate High",
+                                        "color": "#6baed6"
+                                    },
+                                    {
+                                        "value": "Intermediate",
+                                        "color": "#bdd7e7"
+                                    },
+                                    {
+                                        "value": "Intermediate Low",
+                                        "color": "#eff3ff"
+                                    }
+                                ]
+                            }
+                        }
+                    }     
+                },
+                {
+                    "name": "IPC 3/CH and above (2019 data)",
+                    "type": "csv",
+                    "url": "https://data.apps.fao.org/catalog/dataset/47d47fb5-7cdd-4919-80bb-7c03af224b82/resource/1b298e9a-d692-470d-b464-055a54a3cd52/download/population-ipcch3in2019.csv",
+                    "tableStyle": {
+                        "scale": 2,
+                        "scaleByValue": false,
+                        "dataVariable": "IPC 3/CH and above (2019 data)",
+                        "columns": {
+                            "Country": {
+                                "type": "HIDDEN"
+                            },
+                            "Country Note": {
+                                "type": "HIDDEN"
+                            },
+                            "IPC 3/CH and above (2019 data)": {
+                                "colorBins": [
+                                    {
+                                        "value": ">10 million",
+                                        "color": "#800026"
+                                    },
+                                    {
+                                        "value": "5–9.99 million",
+                                        "color": "#bd0026"
+                                    },
+                                    {
+                                        "value": "3–4.99 million",
+                                        "color": "#e31a1c"
+                                    },
+                                    {
+                                        "value": "1–2.99 million",
+                                        "color": "#fc4e2a"
+
+                                    },
+                                    {
+                                        "value": "<1 million",
+                                        "color": "#fd8d3c"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "IPC 2/CH and above (2019 data)",
+                    "type": "csv",
+                    "url": "https://data.apps.fao.org/catalog/dataset/47d47fb5-7cdd-4919-80bb-7c03af224b82/resource/ec748d01-3d68-4fd0-9eac-fafd61c16f2d/download/population-ipcch2in2019.csv",
+                    "tableStyle": {
+                        "scale": 1,
+                        "scaleByValue": false,
+                        "dataVariable": "IPC 2/CH and above (2019 data)",
+                        "columns": {
+                            "Country": {
+                                "type": "HIDDEN"
+                            },
+                            "Country Note": {
+                                "type": "HIDDEN"
+                            },
+                            "IPC 2/CH and above (2019 data)": {
+                                "colorBins": [
+                                    {
+                                        "value": ">10 million",
+                                        "color": "#fd8d3c"
+                                    },
+                                    {
+                                        "value": "5–9.99 million",
+                                        "color": "#feb24c"
+                                    },
+                                    {
+                                        "value": "3–4.99 million",
+                                        "color": "#fed976"
+                                    },
+                                    {
+                                        "value": "1–2.99 million",
+                                        "color": "#ffeda0"
+                                    },
+                                    {
+                                        "value": "<1 million",
+                                        "color": "#ffffcc"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Crop Calendar Recommendations",
+            "description": "# FAO recommendations on planting and harvesting tasks during the COVID-19 outbreak using crop calendars\r\n \r\n An increasing number of countries introduce measures that reduce population and labor mobility in view of the COVID-19 outbreak. It is straightforward that agricultural tasks maybe compromised, turning the health to a production system shock. If agricultural tasks are not performed on time, crops ready for harvest may be lost while planting may not be feasible challenging future food availability. In other words, food production systems may collapse with devastating impacts on food security.\r\n \r\n The mapping tool displays information on planting and harvesting months for key food and agriculture commodities. Planting and harvesting calendars, indicate the critical periods that the activities need to take place, as commanded by local agro-ecological conditions. The commodities are chosen based on their importance for each country in terms of value of production or because they constitute a key food staple.\r\n \r\n The traffic lights present FAO recommendations on planting and harvesting for each commodity and country. A green light advises to proceed with the task while speeding up the pace. This happens in all cases that a task needs to take place in the month of April and irrespective of the total number of months needed to complete the task. A yellow light advises to monitor and assess the situation, as the crisis unfolds. The yellow light also suggests speeding up the task if this deems necessary and feasible.\r\n \r\n _Source: Compilation of data from FAOSTAT, FAO-GIEWS, FAO-AMIS, FAO-AGP, USDA, ECDC_\r\n \r\n Catalog: [Download](/catalog/dataset/planting-and-harvesting-recommendations-during-the-covid-19-outbreak)\r\n",
+            "type": "group",
+            "preserveOrder": true,
+            "items": [
+                {
+                    "name": "Bananas",
+                    "type": "csv",
+                    "url": "https://data.apps.fao.org/catalog/dataset/592d8ea1-eb3b-45bc-a59c-0ce94f91f457/resource/93fb82e6-3848-4ccc-a9b1-0579663b6fbb/download/bananas.csv",
+                    "tableStyle": {
+                        "dataVariable": "FAO recommendation (plant)",
+                        "columns": {
+                            "Country": {"type": "HIDDEN" },
+                            "Commodity": {"type": "HIDDEN" },
+                            "Planting": {"type": "HIDDEN" },
+                            "Harvesting": {"type": "HIDDEN" },
+                            "Quarantine End": {"type": "HIDDEN" },
+                            "FAO recommendation (plant)":{
+                                "colorBins": [
+                                    {
+                                        "value": "Monitor, assess and speed up",
+                                        "color": "rgb(237,200,72)"
+                                    },
+                                    {
+                                        "value": "Proceed and speed up",
+                                        "color": "rgb(89,161,79)"
+                                    }
+                                ]
+                            },
+                            "FAO recommendation (harvest)": {
+                                "colorBins": [
+                                    {
+                                        "value": "Monitor, assess and speed up",
+                                        "color": "rgb(237,200,72)"
+                                    },
+                                    {
+                                        "value": "Proceed and speed up",
+                                        "color": "rgb(89,161,79)"
+                                    }
+                                ]
+                             },
+                            "Gross Production Value (current million US$)": { },
+                            "Covid19 cases": { },
+                            "Covid19 deaths": {  }
+                        }
+                    }     
+                },
+                {
+                    "name": "Barley",
+                    "type": "csv",
+                    "url": "https://data.apps.fao.org/catalog/dataset/592d8ea1-eb3b-45bc-a59c-0ce94f91f457/resource/a552004f-13aa-4587-94db-e9cfff7b1da3/download/barley.csv",
+                    "tableStyle": {
+                        "dataVariable": "FAO recommendation (plant)",
+                        "columns": {
+                            "Country": {"type": "HIDDEN" },
+                            "Commodity": {"type": "HIDDEN" },
+                            "Planting": {"type": "HIDDEN" },
+                            "Harvesting": {"type": "HIDDEN" },
+                            "Quarantine End": {"type": "HIDDEN" },
+                            "FAO recommendation (plant)":{
+                                "colorBins": [
+                                    {
+                                        "value": "Monitor, assess and speed up",
+                                        "color": "rgb(237,200,72)"
+                                    },
+                                    {
+                                        "value": "Proceed and speed up",
+                                        "color": "rgb(89,161,79)"
+                                    }
+                                ]
+                            },
+                            "FAO recommendation (harvest)": {
+                                "colorBins": [
+                                    {
+                                        "value": "Monitor, assess and speed up",
+                                        "color": "rgb(237,200,72)"
+                                    },
+                                    {
+                                        "value": "Proceed and speed up",
+                                        "color": "rgb(89,161,79)"
+                                    }
+                                ]
+                             },
+                            "Gross Production Value (current million US$)": { },
+                            "Covid19 cases": { },
+                            "Covid19 deaths": {  }
+                        }
+                    }     
+                },
+                {
+                    "name": "Beans",
+                    "type": "csv",
+                    "url": "https://data.apps.fao.org/catalog/dataset/592d8ea1-eb3b-45bc-a59c-0ce94f91f457/resource/0ccf71e5-bb60-4909-aae5-f7783e2e7350/download/beans.csv",
+                    "tableStyle": {
+                        "dataVariable": "FAO recommendation (plant)",
+                        "columns": {
+                            "Country": {"type": "HIDDEN" },
+                            "Commodity": {"type": "HIDDEN" },
+                            "Planting": {"type": "HIDDEN" },
+                            "Harvesting": {"type": "HIDDEN" },
+                            "Quarantine End": {"type": "HIDDEN" },
+                            "FAO recommendation (plant)":{
+                                "colorBins": [
+                                    {
+                                        "value": "Monitor, assess and speed up",
+                                        "color": "rgb(237,200,72)"
+                                    },
+                                    {
+                                        "value": "Proceed and speed up",
+                                        "color": "rgb(89,161,79)"
+                                    }
+                                ]
+                            },
+                            "FAO recommendation (harvest)": {
+                                "colorBins": [
+                                    {
+                                        "value": "Monitor, assess and speed up",
+                                        "color": "rgb(237,200,72)"
+                                    },
+                                    {
+                                        "value": "Proceed and speed up",
+                                        "color": "rgb(89,161,79)"
+                                    }
+                                ]
+                             },
+                            "Gross Production Value (current million US$)": { },
+                            "Covid19 cases": { },
+                            "Covid19 deaths": {  }
+                        }
+                    }     
+                },
+                {
+                    "name": "Cassava",
+                    "type": "csv",
+                    "url": "https://data.apps.fao.org/catalog/dataset/592d8ea1-eb3b-45bc-a59c-0ce94f91f457/resource/a47706ba-109a-42e6-bf79-12ce50de85ce/download/cassava.csv",
+                    "tableStyle": {
+                        "dataVariable": "FAO recommendation (plant)",
+                        "columns": {
+                            "Country": {"type": "HIDDEN" },
+                            "Commodity": {"type": "HIDDEN" },
+                            "Planting": {"type": "HIDDEN" },
+                            "Harvesting": {"type": "HIDDEN" },
+                            "Quarantine End": {"type": "HIDDEN" },
+                            "FAO recommendation (plant)":{
+                                "colorBins": [
+                                    {
+                                        "value": "Monitor, assess and speed up",
+                                        "color": "rgb(237,200,72)"
+                                    },
+                                    {
+                                        "value": "Proceed and speed up",
+                                        "color": "rgb(89,161,79)"
+                                    }
+                                ]
+                            },
+                            "FAO recommendation (harvest)": {
+                                "colorBins": [
+                                    {
+                                        "value": "Monitor, assess and speed up",
+                                        "color": "rgb(237,200,72)"
+                                    },
+                                    {
+                                        "value": "Proceed and speed up",
+                                        "color": "rgb(89,161,79)"
+                                    }
+                                ]
+                             },
+                            "Gross Production Value (current million US$)": { },
+                            "Covid19 cases": { },
+                            "Covid19 deaths": {  }
+                        }
+                    }     
+                },
+                {
+                    "name": "Chilies peppers",
+                    "type": "csv",
+                    "url": "https://data.apps.fao.org/catalog/dataset/592d8ea1-eb3b-45bc-a59c-0ce94f91f457/resource/40de97e6-b45a-446b-806c-1ca707d5728e/download/chilies-peppers.csv",
+                    "tableStyle": {
+                        "dataVariable": "FAO recommendation (plant)",
+                        "columns": {
+                            "Country": {"type": "HIDDEN" },
+                            "Commodity": {"type": "HIDDEN" },
+                            "Planting": {"type": "HIDDEN" },
+                            "Harvesting": {"type": "HIDDEN" },
+                            "Quarantine End": {"type": "HIDDEN" },
+                            "FAO recommendation (plant)":{
+                                "colorBins": [
+                                    {
+                                        "value": "Monitor, assess and speed up",
+                                        "color": "rgb(237,200,72)"
+                                    },
+                                    {
+                                        "value": "Proceed and speed up",
+                                        "color": "rgb(89,161,79)"
+                                    }
+                                ]
+                            },
+                            "FAO recommendation (harvest)": {
+                                "colorBins": [
+                                    {
+                                        "value": "Monitor, assess and speed up",
+                                        "color": "rgb(237,200,72)"
+                                    },
+                                    {
+                                        "value": "Proceed and speed up",
+                                        "color": "rgb(89,161,79)"
+                                    }
+                                ]
+                             },
+                            "Gross Production Value (current million US$)": { },
+                            "Covid19 cases": { },
+                            "Covid19 deaths": {  }
+                        }
+                    }     
+                },
+                {
+                    "name": "Coconuts",
+                    "type": "csv",
+                    "url": "https://data.apps.fao.org/catalog/dataset/592d8ea1-eb3b-45bc-a59c-0ce94f91f457/resource/d7d42493-8cd7-402a-b0a6-07b9cd14423a/download/coconuts.csv",
+                    "tableStyle": {
+                        "dataVariable": "FAO recommendation (plant)",
+                        "columns": {
+                            "Country": {"type": "HIDDEN" },
+                            "Commodity": {"type": "HIDDEN" },
+                            "Planting": {"type": "HIDDEN" },
+                            "Harvesting": {"type": "HIDDEN" },
+                            "Quarantine End": {"type": "HIDDEN" },
+                            "FAO recommendation (plant)":{
+                                "colorBins": [
+                                    {
+                                        "value": "Monitor, assess and speed up",
+                                        "color": "rgb(237,200,72)"
+                                    },
+                                    {
+                                        "value": "Proceed and speed up",
+                                        "color": "rgb(89,161,79)"
+                                    }
+                                ]
+                            },
+                            "FAO recommendation (harvest)": {
+                                "colorBins": [
+                                    {
+                                        "value": "Monitor, assess and speed up",
+                                        "color": "rgb(237,200,72)"
+                                    },
+                                    {
+                                        "value": "Proceed and speed up",
+                                        "color": "rgb(89,161,79)"
+                                    }
+                                ]
+                             },
+                            "Gross Production Value (current million US$)": { },
+                            "Covid19 cases": { },
+                            "Covid19 deaths": {  }
+                        }
+                    }     
+                },
+                {
+                    "name": "Groundnuts",
+                    "type": "csv",
+                    "url": "https://data.apps.fao.org/catalog/dataset/592d8ea1-eb3b-45bc-a59c-0ce94f91f457/resource/2aef3c86-5719-46d8-926c-897b71d6f4ca/download/groundnuts.csv",
+                    "tableStyle": {
+                        "dataVariable": "FAO recommendation (plant)",
+                        "columns": {
+                            "Country": {"type": "HIDDEN" },
+                            "Commodity": {"type": "HIDDEN" },
+                            "Planting": {"type": "HIDDEN" },
+                            "Harvesting": {"type": "HIDDEN" },
+                            "Quarantine End": {"type": "HIDDEN" },
+                            "FAO recommendation (plant)":{
+                                "colorBins": [
+                                    {
+                                        "value": "Monitor, assess and speed up",
+                                        "color": "rgb(237,200,72)"
+                                    },
+                                    {
+                                        "value": "Proceed and speed up",
+                                        "color": "rgb(89,161,79)"
+                                    }
+                                ]
+                            },
+                            "FAO recommendation (harvest)": {
+                                "colorBins": [
+                                    {
+                                        "value": "Monitor, assess and speed up",
+                                        "color": "rgb(237,200,72)"
+                                    },
+                                    {
+                                        "value": "Proceed and speed up",
+                                        "color": "rgb(89,161,79)"
+                                    }
+                                ]
+                             },
+                            "Gross Production Value (current million US$)": { },
+                            "Covid19 cases": { },
+                            "Covid19 deaths": {  }
+                        }
+                    }     
+                },
+                {
+                    "name": "Lettuce and chicory",
+                    "type": "csv",
+                    "url": "https://data.apps.fao.org/catalog/dataset/592d8ea1-eb3b-45bc-a59c-0ce94f91f457/resource/e24c02e0-c436-423f-b9f5-b6069b46a8f2/download/lettuce-and-chicory.csv",
+                    "tableStyle": {
+                        "dataVariable": "FAO recommendation (plant)",
+                        "columns": {
+                            "Country": {"type": "HIDDEN" },
+                            "Commodity": {"type": "HIDDEN" },
+                            "Planting": {"type": "HIDDEN" },
+                            "Harvesting": {"type": "HIDDEN" },
+                            "Quarantine End": {"type": "HIDDEN" },
+                            "FAO recommendation (plant)":{
+                                "colorBins": [
+                                    {
+                                        "value": "Monitor, assess and speed up",
+                                        "color": "rgb(237,200,72)"
+                                    },
+                                    {
+                                        "value": "Proceed and speed up",
+                                        "color": "rgb(89,161,79)"
+                                    }
+                                ]
+                            },
+                            "FAO recommendation (harvest)": {
+                                "colorBins": [
+                                    {
+                                        "value": "Monitor, assess and speed up",
+                                        "color": "rgb(237,200,72)"
+                                    },
+                                    {
+                                        "value": "Proceed and speed up",
+                                        "color": "rgb(89,161,79)"
+                                    }
+                                ]
+                             },
+                            "Gross Production Value (current million US$)": { },
+                            "Covid19 cases": { },
+                            "Covid19 deaths": {  }
+                        }
+                    }     
+                },
+                {
+                    "name": "Maize",
+                    "type": "csv",
+                    "url": "https://data.apps.fao.org/catalog/dataset/592d8ea1-eb3b-45bc-a59c-0ce94f91f457/resource/fc74eb0f-8854-48ec-b998-f8e39c0d3883/download/maize.csv",
+                    "tableStyle": {
+                        "dataVariable": "FAO recommendation (plant)",
+                        "columns": {
+                            "Country": {"type": "HIDDEN" },
+                            "Commodity": {"type": "HIDDEN" },
+                            "Planting": {"type": "HIDDEN" },
+                            "Harvesting": {"type": "HIDDEN" },
+                            "Quarantine End": {"type": "HIDDEN" },
+                            "FAO recommendation (plant)":{
+                                "colorBins": [
+                                    {
+                                        "value": "Monitor, assess and speed up",
+                                        "color": "rgb(237,200,72)"
+                                    },
+                                    {
+                                        "value": "Proceed and speed up",
+                                        "color": "rgb(89,161,79)"
+                                    }
+                                ]
+                            },
+                            "FAO recommendation (harvest)": {
+                                "colorBins": [
+                                    {
+                                        "value": "Monitor, assess and speed up",
+                                        "color": "rgb(237,200,72)"
+                                    },
+                                    {
+                                        "value": "Proceed and speed up",
+                                        "color": "rgb(89,161,79)"
+                                    }
+                                ]
+                             },
+                            "Gross Production Value (current million US$)": { },
+                            "Covid19 cases": { },
+                            "Covid19 deaths": {  }
+                        }
+                    }     
+                },
+                {
+                    "name": "Melons, other (inc.cantaloupes)",
+                    "type": "csv",
+                    "url": "https://data.apps.fao.org/catalog/dataset/592d8ea1-eb3b-45bc-a59c-0ce94f91f457/resource/d264d440-a9e2-4e85-bd21-dff226618c10/download/melons-other-inc.cantaloupes.csv",
+                    "tableStyle": {
+                        "dataVariable": "FAO recommendation (plant)",
+                        "columns": {
+                            "Country": {"type": "HIDDEN" },
+                            "Commodity": {"type": "HIDDEN" },
+                            "Planting": {"type": "HIDDEN" },
+                            "Harvesting": {"type": "HIDDEN" },
+                            "Quarantine End": {"type": "HIDDEN" },
+                            "FAO recommendation (plant)":{
+                                "colorBins": [
+                                    {
+                                        "value": "Monitor, assess and speed up",
+                                        "color": "rgb(237,200,72)"
+                                    },
+                                    {
+                                        "value": "Proceed and speed up",
+                                        "color": "rgb(89,161,79)"
+                                    }
+                                ]
+                            },
+                            "FAO recommendation (harvest)": {
+                                "colorBins": [
+                                    {
+                                        "value": "Monitor, assess and speed up",
+                                        "color": "rgb(237,200,72)"
+                                    },
+                                    {
+                                        "value": "Proceed and speed up",
+                                        "color": "rgb(89,161,79)"
+                                    }
+                                ]
+                             },
+                            "Gross Production Value (current million US$)": { },
+                            "Covid19 cases": { },
+                            "Covid19 deaths": {  }
+                        }
+                    }     
+                },
+                {
+                    "name": "Millet",
+                    "type": "csv",
+                    "url": "https://data.apps.fao.org/catalog/dataset/592d8ea1-eb3b-45bc-a59c-0ce94f91f457/resource/93fb82e6-3848-4ccc-a9b1-0579663b6fbb/download/bananas.csv",
+                    "tableStyle": {
+                        "dataVariable": "FAO recommendation (plant)",
+                        "columns": {
+                            "Country": {"type": "HIDDEN" },
+                            "Commodity": {"type": "HIDDEN" },
+                            "Planting": {"type": "HIDDEN" },
+                            "Harvesting": {"type": "HIDDEN" },
+                            "Quarantine End": {"type": "HIDDEN" },
+                            "FAO recommendation (plant)":{
+                                "colorBins": [
+                                    {
+                                        "value": "Monitor, assess and speed up",
+                                        "color": "rgb(237,200,72)"
+                                    },
+                                    {
+                                        "value": "Proceed and speed up",
+                                        "color": "rgb(89,161,79)"
+                                    }
+                                ]
+                            },
+                            "FAO recommendation (harvest)": {
+                                "colorBins": [
+                                    {
+                                        "value": "Monitor, assess and speed up",
+                                        "color": "rgb(237,200,72)"
+                                    },
+                                    {
+                                        "value": "Proceed and speed up",
+                                        "color": "rgb(89,161,79)"
+                                    }
+                                ]
+                             },
+                            "Gross Production Value (current million US$)": { },
+                            "Covid19 cases": { },
+                            "Covid19 deaths": {  }
+                        }
+                    }     
+                },
+                {
+                    "name": "Plantains and others",
+                    "type": "csv",
+                    "url": "https://data.apps.fao.org/catalog/dataset/592d8ea1-eb3b-45bc-a59c-0ce94f91f457/resource/d899a288-22ca-4f84-81f2-5c2e8bc66f79/download/plantains-and-others.csv",
+                    "tableStyle": {
+                        "dataVariable": "FAO recommendation (plant)",
+                        "columns": {
+                            "Country": {"type": "HIDDEN" },
+                            "Commodity": {"type": "HIDDEN" },
+                            "Planting": {"type": "HIDDEN" },
+                            "Harvesting": {"type": "HIDDEN" },
+                            "Quarantine End": {"type": "HIDDEN" },
+                            "FAO recommendation (plant)":{
+                                "colorBins": [
+                                    {
+                                        "value": "Monitor, assess and speed up",
+                                        "color": "rgb(237,200,72)"
+                                    },
+                                    {
+                                        "value": "Proceed and speed up",
+                                        "color": "rgb(89,161,79)"
+                                    }
+                                ]
+                            },
+                            "FAO recommendation (harvest)": {
+                                "colorBins": [
+                                    {
+                                        "value": "Monitor, assess and speed up",
+                                        "color": "rgb(237,200,72)"
+                                    },
+                                    {
+                                        "value": "Proceed and speed up",
+                                        "color": "rgb(89,161,79)"
+                                    }
+                                ]
+                             },
+                            "Gross Production Value (current million US$)": { },
+                            "Covid19 cases": { },
+                            "Covid19 deaths": {  }
+                        }
+                    }     
+                },
+                {
+                    "name": "Potatoes",
+                    "type": "csv",
+                    "url": "https://data.apps.fao.org/catalog/dataset/planting-and-harvesting-recommendations-during-the-covid-19-outbreak/resource/d0551ca7-ae5c-43de-af05-2f6b70d31b19",
+                    "tableStyle": {
+                        "dataVariable": "FAO recommendation (plant)",
+                        "columns": {
+                            "Country": {"type": "HIDDEN" },
+                            "Commodity": {"type": "HIDDEN" },
+                            "Planting": {"type": "HIDDEN" },
+                            "Harvesting": {"type": "HIDDEN" },
+                            "Quarantine End": {"type": "HIDDEN" },
+                            "FAO recommendation (plant)":{
+                                "colorBins": [
+                                    {
+                                        "value": "Monitor, assess and speed up",
+                                        "color": "rgb(237,200,72)"
+                                    },
+                                    {
+                                        "value": "Proceed and speed up",
+                                        "color": "rgb(89,161,79)"
+                                    }
+                                ]
+                            },
+                            "FAO recommendation (harvest)": {
+                                "colorBins": [
+                                    {
+                                        "value": "Monitor, assess and speed up",
+                                        "color": "rgb(237,200,72)"
+                                    },
+                                    {
+                                        "value": "Proceed and speed up",
+                                        "color": "rgb(89,161,79)"
+                                    }
+                                ]
+                             },
+                            "Gross Production Value (current million US$)": { },
+                            "Covid19 cases": { },
+                            "Covid19 deaths": {  }
+                        }
+                    }     
+                },
+                {
+                    "name": "Pumpkins, squash and gourds",
+                    "type": "csv",
+                    "url": "https://data.apps.fao.org/catalog/dataset/592d8ea1-eb3b-45bc-a59c-0ce94f91f457/resource/c3134d97-24af-4e21-88e8-5daaf4c17a14/download/pumpkins-squash-and-gourds.csv",
+                    "tableStyle": {
+                        "dataVariable": "FAO recommendation (plant)",
+                        "columns": {
+                            "Country": {"type": "HIDDEN" },
+                            "Commodity": {"type": "HIDDEN" },
+                            "Planting": {"type": "HIDDEN" },
+                            "Harvesting": {"type": "HIDDEN" },
+                            "Quarantine End": {"type": "HIDDEN" },
+                            "FAO recommendation (plant)":{
+                                "colorBins": [
+                                    {
+                                        "value": "Monitor, assess and speed up",
+                                        "color": "rgb(237,200,72)"
+                                    },
+                                    {
+                                        "value": "Proceed and speed up",
+                                        "color": "rgb(89,161,79)"
+                                    }
+                                ]
+                            },
+                            "FAO recommendation (harvest)": {
+                                "colorBins": [
+                                    {
+                                        "value": "Monitor, assess and speed up",
+                                        "color": "rgb(237,200,72)"
+                                    },
+                                    {
+                                        "value": "Proceed and speed up",
+                                        "color": "rgb(89,161,79)"
+                                    }
+                                ]
+                             },
+                            "Gross Production Value (current million US$)": { },
+                            "Covid19 cases": { },
+                            "Covid19 deaths": {  }
+                        }
+                    }     
+                },
+                {
+                    "name": "Rapeseed",
+                    "type": "csv",
+                    "url": "https://data.apps.fao.org/catalog/dataset/592d8ea1-eb3b-45bc-a59c-0ce94f91f457/resource/c07a2f79-cbaf-43d4-9725-01b128db0a6c/download/rapeseed.csv",
+                    "tableStyle": {
+                        "dataVariable": "FAO recommendation (plant)",
+                        "columns": {
+                            "Country": {"type": "HIDDEN" },
+                            "Commodity": {"type": "HIDDEN" },
+                            "Planting": {"type": "HIDDEN" },
+                            "Harvesting": {"type": "HIDDEN" },
+                            "Quarantine End": {"type": "HIDDEN" },
+                            "FAO recommendation (plant)":{
+                                "colorBins": [
+                                    {
+                                        "value": "Monitor, assess and speed up",
+                                        "color": "rgb(237,200,72)"
+                                    },
+                                    {
+                                        "value": "Proceed and speed up",
+                                        "color": "rgb(89,161,79)"
+                                    }
+                                ]
+                            },
+                            "FAO recommendation (harvest)": {
+                                "colorBins": [
+                                    {
+                                        "value": "Monitor, assess and speed up",
+                                        "color": "rgb(237,200,72)"
+                                    },
+                                    {
+                                        "value": "Proceed and speed up",
+                                        "color": "rgb(89,161,79)"
+                                    }
+                                ]
+                             },
+                            "Gross Production Value (current million US$)": { },
+                            "Covid19 cases": { },
+                            "Covid19 deaths": {  }
+                        }
+                    }     
+                },
+                {
+                    "name": "Rice",
+                    "type": "csv",
+                    "url": "https://data.apps.fao.org/catalog/dataset/592d8ea1-eb3b-45bc-a59c-0ce94f91f457/resource/4959c86c-a529-4af0-b1a3-5e10921ffd73/download/rice.csv",
+                    "tableStyle": {
+                        "dataVariable": "FAO recommendation (plant)",
+                        "columns": {
+                            "Country": {"type": "HIDDEN" },
+                            "Commodity": {"type": "HIDDEN" },
+                            "Planting": {"type": "HIDDEN" },
+                            "Harvesting": {"type": "HIDDEN" },
+                            "Quarantine End": {"type": "HIDDEN" },
+                            "FAO recommendation (plant)":{
+                                "colorBins": [
+                                    {
+                                        "value": "Monitor, assess and speed up",
+                                        "color": "rgb(237,200,72)"
+                                    },
+                                    {
+                                        "value": "Proceed and speed up",
+                                        "color": "rgb(89,161,79)"
+                                    }
+                                ]
+                            },
+                            "FAO recommendation (harvest)": {
+                                "colorBins": [
+                                    {
+                                        "value": "Monitor, assess and speed up",
+                                        "color": "rgb(237,200,72)"
+                                    },
+                                    {
+                                        "value": "Proceed and speed up",
+                                        "color": "rgb(89,161,79)"
+                                    }
+                                ]
+                             },
+                            "Gross Production Value (current million US$)": { },
+                            "Covid19 cases": { },
+                            "Covid19 deaths": {  }
+                        }
+                    }     
+                },
+                {
+                    "name": "Sorghum",
+                    "type": "csv",
+                    "url": "https://data.apps.fao.org/catalog/dataset/592d8ea1-eb3b-45bc-a59c-0ce94f91f457/resource/d0a2bda9-7949-49dc-8052-db4cc274b1ef/download/sorghum.csv",
+                    "tableStyle": {
+                        "dataVariable": "FAO recommendation (plant)",
+                        "columns": {
+                            "Country": {"type": "HIDDEN" },
+                            "Commodity": {"type": "HIDDEN" },
+                            "Planting": {"type": "HIDDEN" },
+                            "Harvesting": {"type": "HIDDEN" },
+                            "Quarantine End": {"type": "HIDDEN" },
+                            "FAO recommendation (plant)":{
+                                "colorBins": [
+                                    {
+                                        "value": "Monitor, assess and speed up",
+                                        "color": "rgb(237,200,72)"
+                                    },
+                                    {
+                                        "value": "Proceed and speed up",
+                                        "color": "rgb(89,161,79)"
+                                    }
+                                ]
+                            },
+                            "FAO recommendation (harvest)": {
+                                "colorBins": [
+                                    {
+                                        "value": "Monitor, assess and speed up",
+                                        "color": "rgb(237,200,72)"
+                                    },
+                                    {
+                                        "value": "Proceed and speed up",
+                                        "color": "rgb(89,161,79)"
+                                    }
+                                ]
+                             },
+                            "Gross Production Value (current million US$)": { },
+                            "Covid19 cases": { },
+                            "Covid19 deaths": {  }
+                        }
+                    }     
+                },
+                {
+                    "name": "Soybeans",
+                    "type": "csv",
+                    "url": "https://data.apps.fao.org/catalog/dataset/592d8ea1-eb3b-45bc-a59c-0ce94f91f457/resource/693e45c4-7972-4800-b3ba-22b529cd6142/download/soybeans.csv",
+                    "tableStyle": {
+                        "dataVariable": "FAO recommendation (plant)",
+                        "columns": {
+                            "Country": {"type": "HIDDEN" },
+                            "Commodity": {"type": "HIDDEN" },
+                            "Planting": {"type": "HIDDEN" },
+                            "Harvesting": {"type": "HIDDEN" },
+                            "Quarantine End": {"type": "HIDDEN" },
+                            "FAO recommendation (plant)":{
+                                "colorBins": [
+                                    {
+                                        "value": "Monitor, assess and speed up",
+                                        "color": "rgb(237,200,72)"
+                                    },
+                                    {
+                                        "value": "Proceed and speed up",
+                                        "color": "rgb(89,161,79)"
+                                    }
+                                ]
+                            },
+                            "FAO recommendation (harvest)": {
+                                "colorBins": [
+                                    {
+                                        "value": "Monitor, assess and speed up",
+                                        "color": "rgb(237,200,72)"
+                                    },
+                                    {
+                                        "value": "Proceed and speed up",
+                                        "color": "rgb(89,161,79)"
+                                    }
+                                ]
+                             },
+                            "Gross Production Value (current million US$)": { },
+                            "Covid19 cases": { },
+                            "Covid19 deaths": {  }
+                        }
+                    }     
+                },
+                {
+                    "name": "Sunflower seed",
+                    "type": "csv",
+                    "url": "https://data.apps.fao.org/catalog/dataset/592d8ea1-eb3b-45bc-a59c-0ce94f91f457/resource/c6dc9ac3-dbba-4acd-932f-934800120065/download/sunflower-seed.csv",
+                    "tableStyle": {
+                        "dataVariable": "FAO recommendation (plant)",
+                        "columns": {
+                            "Country": {"type": "HIDDEN" },
+                            "Commodity": {"type": "HIDDEN" },
+                            "Planting": {"type": "HIDDEN" },
+                            "Harvesting": {"type": "HIDDEN" },
+                            "Quarantine End": {"type": "HIDDEN" },
+                            "FAO recommendation (plant)":{
+                                "colorBins": [
+                                    {
+                                        "value": "Monitor, assess and speed up",
+                                        "color": "rgb(237,200,72)"
+                                    },
+                                    {
+                                        "value": "Proceed and speed up",
+                                        "color": "rgb(89,161,79)"
+                                    }
+                                ]
+                            },
+                            "FAO recommendation (harvest)": {
+                                "colorBins": [
+                                    {
+                                        "value": "Monitor, assess and speed up",
+                                        "color": "rgb(237,200,72)"
+                                    },
+                                    {
+                                        "value": "Proceed and speed up",
+                                        "color": "rgb(89,161,79)"
+                                    }
+                                ]
+                             },
+                            "Gross Production Value (current million US$)": { },
+                            "Covid19 cases": { },
+                            "Covid19 deaths": {  }
+                        }
+                    }     
+                },
+                {
+                    "name": "Sweet potatoes",
+                    "type": "csv",
+                    "url": "https://data.apps.fao.org/catalog/dataset/592d8ea1-eb3b-45bc-a59c-0ce94f91f457/resource/8e603966-361f-431b-b84b-2e5de58ed6ad/download/sweet-potatoes.csv",
+                    "tableStyle": {
+                        "dataVariable": "FAO recommendation (plant)",
+                        "columns": {
+                            "Country": {"type": "HIDDEN" },
+                            "Commodity": {"type": "HIDDEN" },
+                            "Planting": {"type": "HIDDEN" },
+                            "Harvesting": {"type": "HIDDEN" },
+                            "Quarantine End": {"type": "HIDDEN" },
+                            "FAO recommendation (plant)":{
+                                "colorBins": [
+                                    {
+                                        "value": "Monitor, assess and speed up",
+                                        "color": "rgb(237,200,72)"
+                                    },
+                                    {
+                                        "value": "Proceed and speed up",
+                                        "color": "rgb(89,161,79)"
+                                    }
+                                ]
+                            },
+                            "FAO recommendation (harvest)": {
+                                "colorBins": [
+                                    {
+                                        "value": "Monitor, assess and speed up",
+                                        "color": "rgb(237,200,72)"
+                                    },
+                                    {
+                                        "value": "Proceed and speed up",
+                                        "color": "rgb(89,161,79)"
+                                    }
+                                ]
+                             },
+                            "Gross Production Value (current million US$)": { },
+                            "Covid19 cases": { },
+                            "Covid19 deaths": {  }
+                        }
+                    }     
+                },
+                {
+                    "name": "Tomatoes",
+                    "type": "csv",
+                    "url": "https://data.apps.fao.org/catalog/dataset/592d8ea1-eb3b-45bc-a59c-0ce94f91f457/resource/f696b96b-5bf0-4e50-84f5-c7a2198caf11/download/tomatoes.csv",
+                    "tableStyle": {
+                        "dataVariable": "FAO recommendation (plant)",
+                        "columns": {
+                            "Country": {"type": "HIDDEN" },
+                            "Commodity": {"type": "HIDDEN" },
+                            "Planting": {"type": "HIDDEN" },
+                            "Harvesting": {"type": "HIDDEN" },
+                            "Quarantine End": {"type": "HIDDEN" },
+                            "FAO recommendation (plant)":{
+                                "colorBins": [
+                                    {
+                                        "value": "Monitor, assess and speed up",
+                                        "color": "rgb(237,200,72)"
+                                    },
+                                    {
+                                        "value": "Proceed and speed up",
+                                        "color": "rgb(89,161,79)"
+                                    }
+                                ]
+                            },
+                            "FAO recommendation (harvest)": {
+                                "colorBins": [
+                                    {
+                                        "value": "Monitor, assess and speed up",
+                                        "color": "rgb(237,200,72)"
+                                    },
+                                    {
+                                        "value": "Proceed and speed up",
+                                        "color": "rgb(89,161,79)"
+                                    }
+                                ]
+                             },
+                            "Gross Production Value (current million US$)": { },
+                            "Covid19 cases": { },
+                            "Covid19 deaths": {  }
+                        }
+                    }     
+                },
+                {
+                    "name": "Wheat",
+                    "type": "csv",
+                    "url": "https://data.apps.fao.org/catalog/dataset/592d8ea1-eb3b-45bc-a59c-0ce94f91f457/resource/ce792a3f-5a0e-452c-a044-e8970d7721f2/download/wheat.csv",
+                    "tableStyle": {
+                        "dataVariable": "FAO recommendation (plant)",
+                        "columns": {
+                            "Country": {"type": "HIDDEN" },
+                            "Commodity": {"type": "HIDDEN" },
+                            "Planting": {"type": "HIDDEN" },
+                            "Harvesting": {"type": "HIDDEN" },
+                            "Quarantine End": {"type": "HIDDEN" },
+                            "FAO recommendation (plant)":{
+                                "colorBins": [
+                                    {
+                                        "value": "Monitor, assess and speed up",
+                                        "color": "rgb(237,200,72)"
+                                    },
+                                    {
+                                        "value": "Proceed and speed up",
+                                        "color": "rgb(89,161,79)"
+                                    }
+                                ]
+                            },
+                            "FAO recommendation (harvest)": {
+                                "colorBins": [
+                                    {
+                                        "value": "Monitor, assess and speed up",
+                                        "color": "rgb(237,200,72)"
+                                    },
+                                    {
+                                        "value": "Proceed and speed up",
+                                        "color": "rgb(89,161,79)"
+                                    }
+                                ]
+                             },
+                            "Gross Production Value (current million US$)": { },
+                            "Covid19 cases": { },
+                            "Covid19 deaths": {  }
+                        }
+                    }     
+                },
+                {
+                    "name": "Yams",
+                    "type": "csv",
+                    "url": "https://data.apps.fao.org/catalog/dataset/592d8ea1-eb3b-45bc-a59c-0ce94f91f457/resource/4e1d86ba-104b-4c73-b1a7-2af3bb1b41b0/download/yams.csv",
+                    "tableStyle": {
+                        "dataVariable": "FAO recommendation (plant)",
+                        "columns": {
+                            "Country": {"type": "HIDDEN" },
+                            "Commodity": {"type": "HIDDEN" },
+                            "Planting": {"type": "HIDDEN" },
+                            "Harvesting": {"type": "HIDDEN" },
+                            "Quarantine End": {"type": "HIDDEN" },
+                            "FAO recommendation (plant)":{
+                                "colorBins": [
+                                    {
+                                        "value": "Monitor, assess and speed up",
+                                        "color": "rgb(237,200,72)"
+                                    },
+                                    {
+                                        "value": "Proceed and speed up",
+                                        "color": "rgb(89,161,79)"
+                                    }
+                                ]
+                            },
+                            "FAO recommendation (harvest)": {
+                                "colorBins": [
+                                    {
+                                        "value": "Monitor, assess and speed up",
+                                        "color": "rgb(237,200,72)"
+                                    },
+                                    {
+                                        "value": "Proceed and speed up",
+                                        "color": "rgb(89,161,79)"
+                                    }
+                                ]
+                             },
+                            "Gross Production Value (current million US$)": { },
+                            "Covid19 cases": { },
+                            "Covid19 deaths": {  }
+                        }
+                    }     
+                }
+
+
+            ]
+        },
+        {
+            "name": "COVID19 Cases",
+            "description": "# A spatiotemporal map of COVID19 cases and deaths\r\n \r\n From [A spatiotemporal map of confirmed cases of COVID19](https://map.terria.io/#share=s-2BjhXyjg7nL1kHT9fsmLWoVJVDq)\r\n \r\n [Zafer Defne](https://www.linkedin.com/in/zaferdefne/) _(not realted to FAO)_ prepared this voluntarily, and during his free time while keeping social distance with fellow human beings. He still has hope.\r\n \r\n Sources who provided the open source data and the tools:\r\n \r\n - [2019 Novel Coronavirus COVID-19 (2019-nCoV) Data Repository by Johns Hopkins CSSE](https://github.com/CSSEGISandData/COVID-19)\r\n - [COVID-19 Interactive Jupyter Notebooks](https://map.terria.io/friedrichknuth/covid_dashboard)\r\n - [TerriaJS](https://terria.io/)\r\n ",
+            "info": [],
+            "isPromoted": false,
+            "isHidden": false,
+            "forceProxy": false,
+            "customProperties": {},
+            "id": "COVID19 Cases",
+            "shortReportSections": [],
+            "isWaitingForDisclaimer": false,
+            "hideSource": true,
+            "nameInCatalog": "COVID19 Cases",
+            "nowViewingIndex": 1,
+            "url": "https://api.data.apps.fao.org/api/v1/bigquery?query=SELECT+*+FROM+%60fao-maps-review.fao_covid.confirmed_month%60",
+            "_url": "https://raw.githubusercontent.com/zdefne-usgs/covid_dashboard/master/covid_conf.csv",
+            "isLegendVisible": true,
+            "displayChoicesBeforeLegend": false,
+            "isMappable": true,
+            "showsInfo": true,
+            "maximumShownFeatureInfos": 100,
+            "zoomOnEnable": false,
+            "dateFormat": {},
+            "useOwnClock": false,
+            "disablePreview": false,
+            "opacity": 0.8,
+            "keepOnTop": false,
+            "polling": {
+                "isPolling": false
+            },
+            "showWarnings": true,
+            "colors": [
+                "#66c2a5",
+                "#fc8d62",
+                "#8da0cb",
+                "#e78ac3",
+                "#a6d854",
+                "#ffd92f",
+                "#f44a4c",
+                "#b3b3b3"
+            ],
+            "idColumns": [
+                "id"
+            ],
+            "isSampled": true,
+            "splitDirection": 0,
+            "tableStyle": {
+                "scale": 4,
+                "scaleByValue": true,
+                "colorBins": [
+                    200,
+                    500,
+                    1000,
+                    2000,
+                    5000,
+                    10000,
+                    20000,
+                    50000,
+                    100000,
+                    200000,
+                    500000,
+                    1000000
+                ],
+                "colorBinMethod": "auto",
+                "colorMap": [
+                    {
+                        "color": "white",
+                        "offset": 0
+                    },
+                    {
+                        "color": "yellow",
+                        "offset": 0.3333333333333333
+                    },
+                    {
+                        "color": "red",
+                        "offset": 0.6666666666666666
+                    },
+                    {
+                        "color": "black",
+                        "offset": 1
+                    }
+                ],
+                "legendTicks": 3,
+                "dataVariable": "Confirmed",
+                "columns": {
+                    "lon": {
+                        "colorBinMethod": "auto",
+                        "legendTicks": 3,
+                        "name": "Lon",
+                        "active": false
+                    },
+                    "lat": {
+                        "colorBinMethod": "auto",
+                        "legendTicks": 3,
+                        "name": "Lat",
+                        "active": false
+                    },
+                    "Value": {
+                        "colorBinMethod": "auto",
+                        "legendTicks": 3,
+                        "name": "Confirmed",
+                        "active": true
+                    }
+                }
+            },
+            "rectangle": [
+                -160.0452,
+                -50.50741200000001,
+                180,
+                80.75981200000001
+            ],
+            "regenerationOptions": {},
+            "isCsvForCharting": false,
+            "type": "csv"
+        },
+        {
+            "name": "COVID19 Deaths",
+            "description": "\r\n # A spatiotemporal map of COVID19 cases and deaths\r\n \r\n From [A spatiotemporal map of confirmed cases of COVID19](https://map.terria.io/#share=s-2BjhXyjg7nL1kHT9fsmLWoVJVDq)\r\n \r\n [Zafer Defne](https://www.linkedin.com/in/zaferdefne/) _(not realted to FAO)_ prepared this voluntarily, and during his free time while keeping social distance with fellow human beings. He still has hope.\r\n \r\n Sources who provided the open source data and the tools:\r\n \r\n - [2019 Novel Coronavirus COVID-19 (2019-nCoV) Data Repository by Johns Hopkins CSSE](https://github.com/CSSEGISandData/COVID-19)\r\n - [COVID-19 Interactive Jupyter Notebooks](https://map.terria.io/friedrichknuth/covid_dashboard)\r\n - [TerriaJS](https://terria.io/)\r\n ",
+            "info": [],
+            "isHidden": false,
+            "forceProxy": false,
+            "customProperties": {},
+            "id": "Root Group/COVID19 Deaths",
+            "shortReportSections": [],
+            "isLoading": false,
+            "isWaitingForDisclaimer": false,
+            "hideSource": true,
+            "nameInCatalog": "COVID19 Deaths",
+            "nowViewingIndex": 0,
+            "_url": "https://raw.githubusercontent.com/zdefne-usgs/covid_dashboard/master/covid_deat.csv",
+            "url": "https://api.data.apps.fao.org/api/v1/bigquery?query=SELECT+*+FROM+%60fao-maps-review.fao_covid.deaths_month%60",
+            "isLegendVisible": true,
+            "displayChoicesBeforeLegend": false,
+            "isMappable": true,
+            "showsInfo": true,
+            "maximumShownFeatureInfos": 100,
+            "zoomOnEnable": false,
+            "dateFormat": {},
+            "useOwnClock": false,
+            "disablePreview": false,
+            "opacity": 0.8,
+            "keepOnTop": true,
+            "polling": {
+                "isPolling": false
+            },
+            "showWarnings": true,
+            "colors": [
+                "#66c2a5",
+                "#fc8d62",
+                "#8da0cb",
+                "#e78ac3",
+                "#a6d854",
+                "#ffd92f",
+                "#f44a4c",
+                "#b3b3b3"
+            ],
+            "idColumns": [
+                "id"
+            ],
+            "isSampled": true,
+            "splitDirection": 0,
+            "tableStyle": {
+                "scale": 1,
+                "scaleByValue": false,
+                "colorBins": [
+                    20,
+                    50,
+                    100,
+                    200,
+                    500,
+                    1000,
+                    2000,
+                    5000,
+                    10000,
+                    20000,
+                    50000,
+                    100000
+                ],
+                "colorBinMethod": "auto",
+                "colorMap": [
+                    {
+                        "color": "white",
+                        "offset": 0
+                    },
+                    {
+                        "color": "magenta",
+                        "offset": 0.3333333333333333
+                    },
+                    {
+                        "color": "blue",
+                        "offset": 0.6666666666666666
+                    },
+                    {
+                        "color": "black",
+                        "offset": 1
+                    }
+                ],
+                "legendTicks": 3,
+                "dataVariable": "Deaths",
+                "columns": {
+                    "lon": {
+                        "colorBinMethod": "auto",
+                        "legendTicks": 3,
+                        "name": "Lon",
+                        "active": false
+                    },
+                    "lat": {
+                        "colorBinMethod": "auto",
+                        "legendTicks": 3,
+                        "name": "Lat",
+                        "active": false
+                    },
+                    "Value": {
+                        "colorBinMethod": "auto",
+                        "legendTicks": 3,
+                        "name": "Deaths",
+                        "active": true
+                    }
+                }
+            },
+            "rectangle": [
+                -160.0452,
+                -50.50741200000001,
+                180,
+                80.75981200000001
+            ],
+            "regenerationOptions": {},
+            "isCsvForCharting": false,
+            "type": "csv",
+            "parents": []
+        },
+        {
+            "name": "Average Percentage Change in Community Mobility (From Feb 2020 - Country)",
+            "type": "csv",
+            "url": "https://api.data.apps.fao.org/api/v1/bigquery/https://data.apps.fao.org/catalog/dataset/884655b4-7747-433d-b1ff-e97d0c83f8d8/resource/7fca31c4-59bf-42fd-9661-d7ec78f79e3e/download/mobilty-all-indicator-query.sql",
+            "itemProperties": {
+                "initialTimeSource": "end",
+                "tableStyle": {
+                    "columns": {
+                        "m49": {
+                            "type": "HIDDEN"
+                        },
+                        "country_name":{
+                            "name":"Country"
+                            
+                        },
+                        "average_percentage_mobility_park":{
+                            "name":"Average Percentage Mobility Change for Parks"
+                        },
+                        "average_percentage_mobility_grocery_and_pharmacy":{
+                            "name":"Percentage Mobility Change for Grocery and Pharmacy"
+                        },
+                        "average_percentage_mobility_residential":{
+                            "name":"Average Percentage Mobility Change for Residence"
+                        },
+                        "average_percentage_mobility_retail_and_recreation":{
+                            "name":"Average Percentage Mobility Change for Retail and Recreation"
+                        },
+                        "average_percentage_mobility_transit_stations":{
+                            "name":"Average Percentage Mobility Change for Transit Stations"
+                        },
+                        "average_percentage_mobility_workplaces":{
+                            "name":"Average Percentage Mobility Change for Workplaces"
+                        }                
+                    }
+                }
+            }
+        },         
+        {
+            "name": "COVID-19 Port Crew Change Implications by Country (login required)",
+            "type": "ckan-resource",
+            "url": "https://data.apps.fao.org/catalog/",
+            "resourceId": "b071f64d-a45a-41cf-8261-15151f82cb3b",
+            "itemProperties": {
+                "tableStyle": {
+                    "dataVariable": "Crew Change Possible",
+                    "columns": {
+                        "Country": {
+                            "type": "HIDDEN"
+                        },
+                        "m49": {
+                            "type": "HIDDEN"
+                        },
+                        "Ports": {
+                            "type": "HIDDEN"
+                        },
+                        "Remarks": {
+                            "type": "HIDDEN"
+                        },
+                        "Crew Change Possible": {
+                            "colorBins": [
+                                {
+                                    "value": "Yes",
+                                    "color": "rgb(146,224,136)"
+                                },
+                                {
+                                    "value": "Subject to screening and approval from Authorities",
+                                    "color": "rgb(251,180,5)"
+                                },
+                                {
+                                    "value": "No",
+                                    "color": "rgb(248,43,96)"
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}

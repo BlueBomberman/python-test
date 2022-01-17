@@ -1,0 +1,119 @@
+{
+    "version": "2.0",
+    "class": "dataset",
+    "href": "https://data.apps.fao.org/map/catalog/srv/api/records/59f7a5ef-2be4-43ee-9600-a6a9e9ff562a/attachments/MapSpam_Dimensions.json",
+    "label": "Latest Events Schema",
+    "source": "https://data.apps.fao.org/map/catalog/srv/eng/catalog.search#/metadata/59f7a5ef-2be4-43ee-9600-a6a9e9ff562a",
+    "updated": "2021-10-10",
+    "value": [],
+    "id": [
+      "disease","diagnosis_status", "animal_type","limit"
+    ],
+    "size": [
+      12,4,5,5
+    ],
+    "role": {        
+        "metric":["disease","diagnosis_status", "animal_type","limit"]
+    },
+    "dimension": {    
+        "disease": {
+            "label": "Disease",
+            "category": {
+              "index": {
+                "all": 0,
+                "african_horse_sickness": 1,
+                "african_swine_fever": 2,
+                "avian_influenza": 3,
+                "bluetongue": 4,
+                "foot_and_mouth_disease": 5,
+                "lumpy_skin_disease": 6,
+                "merscov": 7,
+                "peste_des_petits_ruminants": 8,
+                "rabies": 9,
+                "rift_valley_fever": 10,
+                "other": 11                
+              },
+              "label": {
+                "all": "All",
+                "african_horse_sickness": "African horse sickness",
+                "african_swine_fever": "African swine fever",
+                "avian_influenza": "Influenza - Avian",
+                "bluetongue": "Bluetongue",
+                "foot_and_mouth_disease": "Foot and mouth disease",
+                "lumpy_skin_disease": "Lumpy skin disease",
+                "merscov": "MERS-CoV",
+                "peste_des_petits_ruminants": "Peste des petits ruminants",
+                "rabies": "Rabies",
+                "rift_valley_fever": "Rift Valley fever",
+                "other": "Others (Not listed)"   
+              }
+            }
+        },    
+        "diagnosis_status":{
+            "label":"Diagnosis Status",
+            "category": {
+                "index": {
+                    "all":0,
+                    "confirmed":1,
+                    "denied":2,
+                    "suspected":3                                      
+                },
+                "label": {
+                    "all":"All",
+                    "confirmed":"Confirmed",
+                    "denied":"Denied",
+                    "suspected":"Suspected"                    
+                }
+            
+            }
+        },
+        "animal_type":{
+            "label":"Animal Type",
+            "category": {
+                "index": {
+                    "all":0,
+                    "captive":1,
+                    "domestic":2,
+                    "wild":3,
+                    "environmental_sample":4                                                       
+                },
+                "label": {
+                    "all":"All",
+                    "captive":"Captive",
+                    "domestic":"Domestic",
+                    "wild":"Wild",
+                    "environmental_sample":"Environmental sample"                    
+                }
+            }
+        },
+        "limit":{
+            "label":"Max. Number of Events",
+            "category": {
+                "index": {
+                    "50":0,
+                    "100":1,
+                    "500":2,
+                    "1000":3,
+                    "5000":4
+                },
+                "label": {
+                    "50":"50",
+                    "100":"100",
+                    "500":"500",
+                    "1000":"1000",
+                    "5000":"5000"
+                }
+            
+            }
+        }
+
+    },
+    "extension": {
+        "default": {
+            "disease": "all",
+            "diagnosis_status":"confirmed",
+            "animal_type":"all",
+            "limit":"500"
+        }
+    }
+}

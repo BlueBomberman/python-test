@@ -1,0 +1,112 @@
+{
+    "version": "2.0",
+    "class": "dataset",
+    "href": "https://data.apps.fao.org/map/catalog/srv/api/records/59f7a5ef-2be4-43ee-9600-a6a9e9ff562a/attachments/MapSpam_Dimensions.json",
+    "label": "Gridded Livestock Density (Global - 2010 - 10 km)",
+    "source": "https://data.apps.fao.org/map/catalog/srv/eng/catalog.search#/metadata/47457ad7-ed00-4346-81e2-85aacd0e6d91",
+    "updated": "2013-04-19",
+    "value": [],
+    "id": [
+        "lvstk"
+    ],
+    "size": [
+        8
+    ],
+    "role": {
+        "metric": [
+            "lvstk"
+        ]
+    },
+    "dimension": {
+        "lvstk": {
+            "label": "Livestock",
+            "category": {
+                "index": {
+                    "BF": 0,
+                    "CT": 1,
+                    "CH": 2,
+                    "DK": 3,
+                    "GT": 4,
+                    "HO": 5,
+                    "PG": 6,
+                    "SH": 7
+                },
+                "label": {
+                    "BF": "Buffaloes",
+                    "CT": "Cattle",
+                    "CH": "Chickens",
+                    "DK": "Ducks",
+                    "GT": "Goats",
+                    "HO": "Horses",
+                    "PG": "Pigs",
+                    "SH": "Sheep"
+                },
+                "note": {}
+            }
+        }
+    },
+    "extension": {
+        "default": [
+            {
+                "lvstk": "CT"
+            }
+
+        ],
+        "_dimension": {
+            "livestock": {
+                "lvstk": "CT",
+                "role": {}
+            }
+        },
+        "_styles": [
+            {
+                "dimensions": {
+                    "lvstk": "BF"
+                },
+                "style": "GLW:glw_density_1"
+            },
+            {
+                "dimensions": {
+                    "lvstk": "CT"
+                },
+                "style": "GLW:glw_density_1"
+            },
+            {
+                "dimensions": {
+                    "lvstk": "CH"
+                },
+                "style": "GLW:glw_density_2"
+            },
+            {
+                "dimensions": {
+                    "lvstk": "DK"
+                },
+                "style": "GLW:glw_density_2"
+            },
+            {
+                "dimensions": {
+                    "lvstk": "GT"
+                },
+                "style": "GLW:glw_density_1"
+            },
+            {
+                "dimensions": {
+                    "lvstk": "HO"
+                },
+                "style": "GLW:glw_density_3"
+            },
+            {
+                "dimensions": {
+                    "lvstk": "PG"
+                },
+                "style": "GLW:glw_density_1"
+            },
+            {
+                "dimensions": {
+                    "lvstk": "SH"
+                },
+                "style": "GLW:glw_density_1"
+            }                                                                                              
+        ]
+    }
+}

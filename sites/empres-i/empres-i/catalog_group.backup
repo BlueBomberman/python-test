@@ -1,0 +1,533 @@
+{
+    "name": "EMPRES-i Disease Events",
+    "type": "group",
+    "order": 1,
+    "description": "markdown.md",
+    "preserveOrder": true,
+    "items": [
+          {
+            "name": "Avian Influenza",
+            "order": 2,
+            "description": "Avian Influenza reported cases.",
+            "isEnabled": true,
+            "isLegendVisible": false,
+            "isShown": true,
+
+            "isPromoted": true,
+            "isMappable": true,
+            "_dateFormat": "MM/DD/YYYY",
+            "type": "smart-csv",
+            "url": "https://api.data.apps.fao.org/api/v1/bigquery/https://data.apps.fao.org/catalog/dataset/2242c3e4-dc1b-496a-bdb7-1bf7638c25f6/resource/1748be4f-34e5-49d3-a3d1-fcd53232e344/download/animal-major-disease-parameterized-query.sql",
+            "schemaUrl": "https://storage.googleapis.com/artifacts.fao-empres-re.appspot.com/schemas/avian-influenza-schema.json",
+            
+            "defaultParameters": {
+                "start_date": "01/01/2020",
+                "end_date": "31/12/2021",
+                "animal_type": "all",
+                "diagnosis_status": "confirmed",
+                "disease": "all"
+            },
+            "featureInfoTemplate": "<div>\n <table class=\"cesium-infoBox-defaultTable\">\n <tbody>\n <tr>\n <td><b>{{disease}}</b></td><td><b>Serotypes:{{serotypes}}</b></td>\n\n </tr>\n <tr>\n <td colspan=\"2\">Location: <b>{{location}}</b></td>\n </tr>\n <tr>\n <td>Observed On:\n <b>{{observation_date}}</b></td>\n <td>Reported On: <b>{{report_date}}</b></td>\n </tr>\n <tr>\n <td>Species: <b>{{species}}</b></td>\n <td>Status: <b>{{diagnosis_status}}</b></td>\n </tr>\n <tr>\n <td colspan=\"2\">Humans Deaths &#47; Affected: <b>{{humans_deaths}}</b> &#47;\n <b>{{humans_affected}}</b></td>\n </tr>\n <tr>\n <td colspan=\"2\">Source:\n <b>{{diagnosis_source}}</b></td>\n </tr>\n </tbody>\n </table>\n <a class=\"tjs-_buttons__btn tjs-_buttons__btn-primary tjs-_buttons__btn--small\" style=\"width:auto; float:right;\n margin-bottom:13px; margin-right:1px; margin-top:10px; color:white;\"\n href=\"https://agris.fao.org/agris-search/searchIndex.do?query={{#terria.urlEncodeComponent}}{{disease}}{{/terria.urlEncodeComponent}}\" target=\"_blank\">\n Search Publications on AGRIS\n </a> \n {{#event_id}}\n <a class=\"tjs-_buttons__btn tjs-_buttons__btn-primary tjs-_buttons__btn--small\" style=\"width:auto; float:right;\n margin-bottom:13px; margin-right:1px; margin-top:10px; color:white;\"\n href=\"http://empres-i.fao.org/empres-i/2/obd?idOutbreak={{event_id}}\" target=\"_blank\">\n Event Details on EMPRES-i\n </a>\n {{/event_id}}\n</div>\n{{terria.timeSeries.chart}}\n",
+            "tableStyle": {
+                "dataVariable": "disease",
+                "timeColumn": null,
+                "idColumns": [
+                    "event_id"
+                ],
+                "scaleByValue": false,
+                "scale": 0.75,
+                "_to heavy_ imageUrl": "https://data.apps.fao.org/static/sites/hand-in-hand/icons/mdi24/virus.png",
+                "colorBinMethod": "auto",
+                "colorPalette": "Blues",
+                "nullColor": "rgba(255,255,255,0.4)",
+                "columns": {
+                    "event_id": {
+                        "name": "Event ID",
+                        "type": "HIDDEN"
+                    },
+                    "disease": {
+                        "name": "Disease"
+                    },
+                    "serotype": {
+                        "name": "Serotype"
+                    },
+                    "diagnosis_status": {
+                        "name": "Diagnosis Status",
+                        "colorBins": [
+                            {
+                                "value": "Confirmed",
+                                "color": "Black"
+                            },
+                            {
+                                "value": "Denied",
+                                "color": "White"
+                            }
+                        ]
+                    },
+                    "diagnosis_source": {
+                        "name": "Diagnosis Source"
+                    },
+                    "lat": {},
+                    "lon": {},
+                    "locality": {
+                        "name": "Locality",
+                        "type": "HIDDEN"
+                    },
+                    "country": {
+                        "name": "Country",
+                        "type": "HIDDEN"
+                    },
+                    "region": {
+                        "name": "Region",
+                        "type": "HIDDEN"
+                    },
+                    "location": {
+                        "name": "Location",
+                        "type": "HIDDEN"
+                    },
+                    "Observation Date": {
+                        "name": "Observation Date"
+                    },
+                    "Report Date": {
+                        "name": "Report Date"
+                    },
+                    "display_date": {
+                        "name": "Date"
+                    },
+                    "animal_type": {
+                        "name": "Animal Type"
+                    },
+                    "animal_species": {
+                        "name": "Animal Species"
+                    },
+                    "species": {
+                        "name": "Species"
+                    },
+                    "humans_affected": {
+                        "name": "Humans Affected"
+                    },
+                    "humans_deaths": {
+                        "name": "Human Deaths"
+                    }
+                }
+            }
+        },
+
+
+        {
+            "name": "Foot and mouth disease",
+            "order": 3,
+            "description": "Disease events from FAO Global Animal Disease Information System. EMPRES-i supports veterinary services by facilitating the organization and access to regional and global disease information. Timely and reliable disease information enhances early warning and response to transboundary and high impact animal diseases, including emergent zoonoses, and supports prevention, improved management and progressive approach to control. [EMPRES-i](http://empres-i.fao.org/)",
+            "type": "smart-csv",
+            "url": "https://api.data.apps.fao.org/api/v1/bigquery/https://data.apps.fao.org/catalog/dataset/2242c3e4-dc1b-496a-bdb7-1bf7638c25f6/resource/1748be4f-34e5-49d3-a3d1-fcd53232e344/download/animal-major-disease-parameterized-query.sql",
+            "schemaUrl": "https://data.apps.fao.org/catalog/dataset/2242c3e4-dc1b-496a-bdb7-1bf7638c25f6/resource/1ffafaaf-7925-4911-b3c8-937ebd20657e/download/animal-major-disease-terriajs-schema.json",
+            "isEnabled": true,
+            "isLegendVisible": false,
+            "isPromoted": false,
+            "isShown": false,
+            "defaultParameters": {
+                "start_date": "2020-01-01",
+                "end_date": "2021-12-31",
+                "animal_type": "All",
+                "diagnosis_status": "All",
+                "disease": "All"
+            },
+            "featureInfoTemplate": "<div>\n <table class=\"cesium-infoBox-defaultTable\">\n <tbody>\n <tr>\n <td colspan=\"2\"><b>{{disease}}</b></td>\n </tr>\n <tr>\n <td colspan=\"2\">Location: <b>{{location}}</b></td>\n </tr>\n <tr>\n <td>Observed On:\n <b>{{observation_date}}</b></td>\n <td>Reported On: <b>{{report_date}}</b></td>\n </tr>\n <tr>\n <td>Species: <b>{{species}}</b></td>\n <td>Status: <b>{{diagnosis_status}}</b></td>\n </tr>\n <tr>\n <td colspan=\"2\">Humans Deaths &#47; Affected: <b>{{humans_deaths}}</b> &#47;\n <b>{{humans_affected}}</b></td>\n </tr>\n <tr>\n <td colspan=\"2\">Source:\n <b>{{diagnosis_source}}</b></td>\n </tr>\n </tbody>\n </table>\n <a class=\"tjs-_buttons__btn tjs-_buttons__btn-primary tjs-_buttons__btn--small\" style=\"width:auto; float:right;\n margin-bottom:13px; margin-right:1px; margin-top:10px; color:white;\"\n href=\"https://agris.fao.org/agris-search/searchIndex.do?query={{#terria.urlEncodeComponent}}{{disease}}{{/terria.urlEncodeComponent}}\" target=\"_blank\">\n Search Publications on AGRIS\n </a> \n {{#event_id}}\n <a class=\"tjs-_buttons__btn tjs-_buttons__btn-primary tjs-_buttons__btn--small\" style=\"width:auto; float:right;\n margin-bottom:13px; margin-right:1px; margin-top:10px; color:white;\"\n href=\"http://empres-i.fao.org/empres-i/2/obd?idOutbreak={{event_id}}\" target=\"_blank\">\n Event Details on EMPRES-i\n </a>\n {{/event_id}}\n</div>\n{{terria.timeSeries.chart}}\n",
+            "isMappable": true,
+            "initialTimeSource": "end",
+            "_dateFormat": "MM/DD/YYYY",
+            "tableStyle": {
+                "dataVariable": "disease",
+                "timeColumn": "display_date",
+                "idColumns": [
+                    "event_id"
+                ],
+                "scaleByValue": false,
+                "scale": 0.75,
+                "imageUrl": "https://data.apps.fao.org/static/sites/hand-in-hand/icons/mdi24/virus.png",
+                "colorBinMethod": "auto",
+                "colorPalette": "Purples",
+                "nullColor": "rgba(255,255,255,0.4)",
+                "columns": {
+                    "event_id": {
+                        "name": "Event ID",
+                        "type": "HIDDEN"
+                    },
+                    "disease": {
+                        "name": "Disease"
+                    },
+                    "diagnosis_status": {
+                        "name": "Diagnosis Status",
+                        "colorBins": [
+                            {
+                                "value": "Confirmed",
+                                "color": "Black"
+                            },
+                            {
+                                "value": "Denied",
+                                "color": "White"
+                            }
+                        ]
+                    },
+                    "diagnosis_source": {
+                        "name": "Diagnosis Source"
+                    },
+                    "lat": {},
+                    "lon": {},
+                    "locality": {
+                        "name": "Locality",
+                        "type": "HIDDEN"
+                    },
+                    "country": {
+                        "name": "Country",
+                        "type": "HIDDEN"
+                    },
+                    "region": {
+                        "name": "Region",
+                        "type": "HIDDEN"
+                    },
+                    "location": {
+                        "name": "Location",
+                        "type": "HIDDEN"
+                    },
+                    "Observation Date": {
+                        "name": "Observation Date"
+                    },
+                    "Report Date": {
+                        "name": "Report Date"
+                    },
+                    "display_date": {
+                        "name": "Date"
+                    },
+                    "animal_type": {
+                        "name": "Animal Type"
+                    },
+                    "animal_species": {
+                        "name": "Animal Species"
+                    },
+                    "species": {
+                        "name": "Species"
+                    },
+                    "humans_affected": {
+                        "name": "Humans Affected"
+                    },
+                    "humans_deaths": {
+                        "name": "Human Deaths"
+                    }
+                }
+            }
+        },
+
+        {
+            "name": "Rift Valley fever",
+            "order": 1,
+            "description": "Disease events from FAO Global Animal Disease Information System. EMPRES-i supports veterinary services by facilitating the organization and access to regional and global disease information. Timely and reliable disease information enhances early warning and response to transboundary and high impact animal diseases, including emergent zoonoses, and supports prevention, improved management and progressive approach to control. [EMPRES-i](http://empres-i.fao.org/)",
+            "type": "smart-csv",
+            "url": "https://api.data.apps.fao.org/api/v1/bigquery/https://data.apps.fao.org/catalog/dataset/2242c3e4-dc1b-496a-bdb7-1bf7638c25f6/resource/1748be4f-34e5-49d3-a3d1-fcd53232e344/download/animal-major-disease-parameterized-query.sql",
+            "schemaUrl": "https://data.apps.fao.org/catalog/dataset/2242c3e4-dc1b-496a-bdb7-1bf7638c25f6/resource/1ffafaaf-7925-4911-b3c8-937ebd20657e/download/animal-major-disease-terriajs-schema.json",
+            "isEnabled": true,
+            "isLegendVisible": false,
+            "isShown": true,
+            "isPromoted": true,
+            "defaultParameters": {
+                "start_date": "2020-01-01",
+                "end_date": "2021-12-31",
+                "animal_type": "all",
+                "diagnosis_status": "confirmed",
+                "disease": "all"
+            },
+            "featureInfoTemplate": "<div>\n <table class=\"cesium-infoBox-defaultTable\">\n <tbody>\n <tr>\n <td colspan=\"2\"><b>{{disease}}</b></td>\n </tr>\n <tr>\n <td colspan=\"2\">Location: <b>{{location}}</b></td>\n </tr>\n <tr>\n <td>Observed On:\n <b>{{observation_date}}</b></td>\n <td>Reported On: <b>{{report_date}}</b></td>\n </tr>\n <tr>\n <td>Species: <b>{{species}}</b></td>\n <td>Status: <b>{{diagnosis_status}}</b></td>\n </tr>\n <tr>\n <td colspan=\"2\">Humans Deaths &#47; Affected: <b>{{humans_deaths}}</b> &#47;\n <b>{{humans_affected}}</b></td>\n </tr>\n <tr>\n <td colspan=\"2\">Source:\n <b>{{diagnosis_source}}</b></td>\n </tr>\n </tbody>\n </table>\n <a class=\"tjs-_buttons__btn tjs-_buttons__btn-primary tjs-_buttons__btn--small\" style=\"width:auto; float:right;\n margin-bottom:13px; margin-right:1px; margin-top:10px; color:white;\"\n href=\"https://agris.fao.org/agris-search/searchIndex.do?query={{#terria.urlEncodeComponent}}{{disease}}{{/terria.urlEncodeComponent}}\" target=\"_blank\">\n Search Publications on AGRIS\n </a> \n {{#event_id}}\n <a class=\"tjs-_buttons__btn tjs-_buttons__btn-primary tjs-_buttons__btn--small\" style=\"width:auto; float:right;\n margin-bottom:13px; margin-right:1px; margin-top:10px; color:white;\"\n href=\"http://empres-i.fao.org/empres-i/2/obd?idOutbreak={{event_id}}\" target=\"_blank\">\n Event Details on EMPRES-i\n </a>\n {{/event_id}}\n</div>\n{{terria.timeSeries.chart}}\n",
+            "isMappable": true,
+            "_dateFormat": "MM/DD/YYYY",
+            "tableStyle": {
+                "dataVariable": "disease",
+                "timeColumn": null,
+                "idColumns": [
+                    "event_id"
+                ],
+                "scaleByValue": false,
+                "scale": 0.75,
+                "_to heavy_ imageUrl": "https://data.apps.fao.org/static/sites/hand-in-hand/icons/mdi24/virus.png",
+                "colorBinMethod": "auto",
+                "colorPalette": "Purples",
+                "nullColor": "rgba(255,255,255,0.4)",
+                "columns": {
+                    "event_id": {
+                        "name": "Event ID",
+                        "type": "HIDDEN"
+                    },
+                    "disease": {
+                        "name": "Disease"
+                    },
+                    "serotype": {
+                        "name": "Serotype"
+                    },
+                    "diagnosis_status": {
+                        "name": "Diagnosis Status",
+                        "colorBins": [
+                            {
+                                "value": "Confirmed",
+                                "color": "Black"
+                            },
+                            {
+                                "value": "Denied",
+                                "color": "White"
+                            }
+                        ]
+                    },
+                    "diagnosis_source": {
+                        "name": "Diagnosis Source"
+                    },
+                    "lat": {},
+                    "lon": {},
+                    "locality": {
+                        "name": "Locality",
+                        "type": "HIDDEN"
+                    },
+                    "country": {
+                        "name": "Country",
+                        "type": "HIDDEN"
+                    },
+                    "region": {
+                        "name": "Region",
+                        "type": "HIDDEN"
+                    },
+                    "location": {
+                        "name": "Location",
+                        "type": "HIDDEN"
+                    },
+                    "Observation Date": {
+                        "name": "Observation Date"
+                    },
+                    "Report Date": {
+                        "name": "Report Date"
+                    },
+                    "display_date": {
+                        "name": "Date"
+                    },
+                    "animal_type": {
+                        "name": "Animal Type"
+                    },
+                    "animal_species": {
+                        "name": "Animal Species"
+                    },
+                    "species": {
+                        "name": "Species"
+                    },
+                    "humans_affected": {
+                        "name": "Humans Affected"
+                    },
+                    "humans_deaths": {
+                        "name": "Human Deaths"
+                    }
+                }
+            }
+        },
+
+        {
+            "name": "Lumpy Skin Disease",
+            "order": 2,
+            "description": "Disease events from FAO Global Animal Disease Information System. EMPRES-i supports veterinary services by facilitating the organization and access to regional and global disease information. Timely and reliable disease information enhances early warning and response to transboundary and high impact animal diseases, including emergent zoonoses, and supports prevention, improved management and progressive approach to control. [EMPRES-i](http://empres-i.fao.org/)",
+            "type": "smart-csv",
+            "url": "https://api.data.apps.fao.org/api/v1/bigquery/https://data.apps.fao.org/catalog/dataset/2242c3e4-dc1b-496a-bdb7-1bf7638c25f6/resource/6cf8d8ed-1cf0-4f71-9dbf-3a837c96b5f9/download/animal-minor-disease-parameterized-query.sql",
+            "schemaUrl": "https://data.apps.fao.org/catalog/dataset/2242c3e4-dc1b-496a-bdb7-1bf7638c25f6/resource/d874ed7a-8604-4e63-9526-67e4d4b42715/download/animal-minor-disease-terriajs-schema.json",
+            "isEnabled": true,
+            "isLegendVisible": false,
+            "isShown": false,
+            "isPromoted": false,
+            "defaultParameters": {
+                "start_date": "2020-01-01",
+                "end_date": "2021-12-31",
+                "animal_type": "all",
+                "diagnosis_status": "confirmed",
+                "disease": "acarapisosis_of_honey_bees"
+            },
+            "featureInfoTemplate": "<div>\n <table class=\"cesium-infoBox-defaultTable\">\n <tbody>\n <tr>\n <td colspan=\"2\"><b>{{disease}}</b></td>\n </tr>\n <tr>\n <td colspan=\"2\">Location: <b>{{location}}</b></td>\n </tr>\n <tr>\n <td>Observed On:\n <b>{{observation_date}}</b></td>\n <td>Reported On: <b>{{report_date}}</b></td>\n </tr>\n <tr>\n <td>Species: <b>{{species}}</b></td>\n <td>Status: <b>{{diagnosis_status}}</b></td>\n </tr>\n <tr>\n <td colspan=\"2\">Humans Deaths &#47; Affected: <b>{{humans_deaths}}</b> &#47;\n <b>{{humans_affected}}</b></td>\n </tr>\n <tr>\n <td colspan=\"2\">Source:\n <b>{{diagnosis_source}}</b></td>\n </tr>\n </tbody>\n </table>\n <a class=\"tjs-_buttons__btn tjs-_buttons__btn-primary tjs-_buttons__btn--small\" style=\"width:auto; float:right;\n margin-bottom:13px; margin-right:1px; margin-top:10px; color:white;\"\n href=\"https://agris.fao.org/agris-search/searchIndex.do?query={{#terria.urlEncodeComponent}}{{disease}}{{/terria.urlEncodeComponent}}\" target=\"_blank\">\n Search Publications on AGRIS\n </a> \n {{#event_id}}\n <a class=\"tjs-_buttons__btn tjs-_buttons__btn-primary tjs-_buttons__btn--small\" style=\"width:auto; float:right;\n margin-bottom:13px; margin-right:1px; margin-top:10px; color:white;\"\n href=\"http://empres-i.fao.org/empres-i/2/obd?idOutbreak={{event_id}}\" target=\"_blank\">\n Event Details on EMPRES-i\n </a>\n {{/event_id}}\n</div>\n{{terria.timeSeries.chart}}\n",
+            "isMappable": true,
+            "_dateFormat": "MM/DD/YYYY",
+            "tableStyle": {
+                "dataVariable": "disease",
+                "timeColumn": null,
+                "idColumns": [
+                    "event_id"
+                ],
+                "scaleByValue": false,
+                "scale": 0.75,
+                "imageUrl": "https://data.apps.fao.org/static/sites/hand-in-hand/icons/mdi24/virus.png",
+                "colorBinMethod": "auto",
+                "colorPalette": "Purples",
+                "nullColor": "rgba(255,255,255,0.4)",
+                "columns": {
+                    "event_id": {
+                        "name": "Event ID",
+                        "type": "HIDDEN"
+                    },
+                    "disease": {
+                        "name": "Disease"
+                    },
+                    "diagnosis_status": {
+                        "name": "Diagnosis Status",
+                        "colorBins": [
+                            {
+                                "value": "Confirmed",
+                                "color": "Black"
+                            },
+                            {
+                                "value": "Denied",
+                                "color": "White"
+                            }
+                        ]
+                    },
+                    "diagnosis_source": {
+                        "name": "Diagnosis Source"
+                    },
+                    "lat": {},
+                    "lon": {},
+                    "locality": {
+                        "name": "Locality",
+                        "type": "HIDDEN"
+                    },
+                    "country": {
+                        "name": "Country",
+                        "type": "HIDDEN"
+                    },
+                    "region": {
+                        "name": "Region",
+                        "type": "HIDDEN"
+                    },
+                    "location": {
+                        "name": "Location",
+                        "type": "HIDDEN"
+                    },
+                    "Observation Date": {
+                        "name": "Observation Date"
+                    },
+                    "Report Date": {
+                        "name": "Report Date"
+                    },
+                    "display_date": {
+                        "name": "Date"
+                    },
+                    "animal_type": {
+                        "name": "Animal Type"
+                    },
+                    "animal_species": {
+                        "name": "Animal Species"
+                    },
+                    "species": {
+                        "name": "Species"
+                    },
+                    "humans_affected": {
+                        "name": "Humans Affected"
+                    },
+                    "humans_deaths": {
+                        "name": "Human Deaths"
+                    }
+                }
+            }
+        },
+        {
+            "name": "Events from subsidiary diseases(by date)",
+            "order": 4,
+            "description": "Disease events from FAO Global Animal Disease Information System. EMPRES-i supports veterinary services by facilitating the organization and access to regional and global disease information. Timely and reliable disease information enhances early warning and response to transboundary and high impact animal diseases, including emergent zoonoses, and supports prevention, improved management and progressive approach to control. [EMPRES-i](http://empres-i.fao.org/)",
+            "type": "smart-csv",
+            "url": "https://api.data.apps.fao.org/api/v1/bigquery/https://data.apps.fao.org/catalog/dataset/2242c3e4-dc1b-496a-bdb7-1bf7638c25f6/resource/6cf8d8ed-1cf0-4f71-9dbf-3a837c96b5f9/download/animal-minor-disease-parameterized-query.sql",
+            "schemaUrl": "https://data.apps.fao.org/catalog/dataset/2242c3e4-dc1b-496a-bdb7-1bf7638c25f6/resource/d874ed7a-8604-4e63-9526-67e4d4b42715/download/animal-minor-disease-terriajs-schema.json",
+            "isEnabled": true,
+            "isLegendVisible": false,
+            "isShown": false,
+            "isPromoted": false,
+            "defaultParameters": {
+                "start_date": "2020-01-01",
+                "end_date": "2020-12-31",
+                "animal_type": "all",
+                "diagnosis_status": "confirmed",
+                "disease": "acarapisosis_of_honey_bees"
+            },
+            "featureInfoTemplate": "<div>\n <table class=\"cesium-infoBox-defaultTable\">\n <tbody>\n <tr>\n <td colspan=\"2\"><b>{{disease}}</b></td>\n </tr>\n <tr>\n <td colspan=\"2\">Location: <b>{{location}}</b></td>\n </tr>\n <tr>\n <td>Observed On:\n <b>{{observation_date}}</b></td>\n <td>Reported On: <b>{{report_date}}</b></td>\n </tr>\n <tr>\n <td>Species: <b>{{species}}</b></td>\n <td>Status: <b>{{diagnosis_status}}</b></td>\n </tr>\n <tr>\n <td colspan=\"2\">Humans Deaths &#47; Affected: <b>{{humans_deaths}}</b> &#47;\n <b>{{humans_affected}}</b></td>\n </tr>\n <tr>\n <td colspan=\"2\">Source:\n <b>{{diagnosis_source}}</b></td>\n </tr>\n </tbody>\n </table>\n <a class=\"tjs-_buttons__btn tjs-_buttons__btn-primary tjs-_buttons__btn--small\" style=\"width:auto; float:right;\n margin-bottom:13px; margin-right:1px; margin-top:10px; color:white;\"\n href=\"https://agris.fao.org/agris-search/searchIndex.do?query={{#terria.urlEncodeComponent}}{{disease}}{{/terria.urlEncodeComponent}}\" target=\"_blank\">\n Search Publications on AGRIS\n </a> \n {{#event_id}}\n <a class=\"tjs-_buttons__btn tjs-_buttons__btn-primary tjs-_buttons__btn--small\" style=\"width:auto; float:right;\n margin-bottom:13px; margin-right:1px; margin-top:10px; color:white;\"\n href=\"http://empres-i.fao.org/empres-i/2/obd?idOutbreak={{event_id}}\" target=\"_blank\">\n Event Details on EMPRES-i\n </a>\n {{/event_id}}\n</div>\n{{terria.timeSeries.chart}}\n",
+            "isMappable": true,
+            "initialTimeSource": "end",
+            "_dateFormat": "MM/DD/YYYY",
+            "tableStyle": {
+                "dataVariable": "disease",
+                "timeColumn": "display_date",
+                "idColumns": [
+                    "event_id"
+                ],
+                "scaleByValue": false,
+                "scale": 0.75,
+                "imageUrl": "https://data.apps.fao.org/static/sites/hand-in-hand/icons/mdi24/virus.png",
+                "colorBinMethod": "auto",
+                "colorPalette": "Purples",
+                "nullColor": "rgba(255,255,255,0.4)",
+                "columns": {
+                    "event_id": {
+                        "name": "Event ID",
+                        "type": "HIDDEN"
+                    },
+                    "disease": {
+                        "name": "Disease"
+                    },
+                    "diagnosis_status": {
+                        "name": "Diagnosis Status",
+                        "colorBins": [
+                            {
+                                "value": "Confirmed",
+                                "color": "Black"
+                            },
+                            {
+                                "value": "Denied",
+                                "color": "White"
+                            }
+                        ]
+                    },
+                    "diagnosis_source": {
+                        "name": "Diagnosis Source"
+                    },
+                    "lat": {},
+                    "lon": {},
+                    "locality": {
+                        "name": "Locality",
+                        "type": "HIDDEN"
+                    },
+                    "country": {
+                        "name": "Country",
+                        "type": "HIDDEN"
+                    },
+                    "region": {
+                        "name": "Region",
+                        "type": "HIDDEN"
+                    },
+                    "location": {
+                        "name": "Location",
+                        "type": "HIDDEN"
+                    },
+                    "Observation Date": {
+                        "name": "Observation Date"
+                    },
+                    "Report Date": {
+                        "name": "Report Date"
+                    },
+                    "display_date": {
+                        "name": "Date"
+                    },
+                    "animal_type": {
+                        "name": "Animal Type"
+                    },
+                    "animal_species": {
+                        "name": "Animal Species"
+                    },
+                    "species": {
+                        "name": "Species"
+                    },
+                    "humans_affected": {
+                        "name": "Humans Affected"
+                    },
+                    "humans_deaths": {
+                        "name": "Human Deaths"
+                    }
+                }
+            }
+        }
+    ]
+}

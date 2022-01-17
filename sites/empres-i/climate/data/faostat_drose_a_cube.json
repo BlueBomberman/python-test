@@ -1,0 +1,87 @@
+{
+    "version": "2.0",
+    "class": "dataset",
+    "href": "https://data.apps.fao.org/map/catalog/srv/api/records/59f7a5ef-2be4-43ee-9600-a6a9e9ff562a/attachments/MapSpam_Dimensions.json",
+    "label": "GHG Emissions from Drained Organic Soils (Global - yearly - Gg)",
+    "source": "https://data.apps.fao.org/map/catalog/srv/eng/catalog.search#/metadata/898cdbc4-b154-4b8a-a05a-59a47c7fd2d9",
+    "updated": "2013-04-19",
+    "value": [],
+    "id": [
+        "landuse",
+        "gas"
+    ],
+    "size": [
+        2,
+        3
+    ],
+    "role": {
+        "metric": [
+            "landuse",
+            "gas"
+        ]
+    },
+    "dimension": {
+        "landuse": {
+            "label": "Landuse",
+            "category": {
+                "index": {
+                    "C":0,
+                    "G":1
+                },
+                "label": {
+                    "C":"Cropland",
+                    "G":"Grassland"
+                }
+            }
+        },
+        "gas": {
+            "label": "Gas",
+            "category": {
+                "index": {
+                    "N2O":0,
+                    "C":1
+                },
+                "label": {
+                    "N2O":"Nitrous Oxide",
+                    "C":"Carbon"
+                }
+            }
+        }
+    },
+    "extension" : {
+        "default": [
+            { "landuse": "C" },
+            { "gas": "CO2" }
+        ],        
+        "styles": [
+            {
+                "dimensions": {
+                    "landuse": "G",
+                    "gas": "CO2"
+                },
+                "style": "FAOSTAT:faostat_drose_a_g_co2"
+            },
+            {
+                "dimensions": {
+                    "landuse": "G",
+                    "gas": "N2O"
+                },
+                "style": "FAOSTAT:faostat_drose_a_g_n2o"
+            },
+            {
+                "dimensions": {
+                    "landuse": "C",
+                    "gas": "N2O"
+                },
+                "style": "FAOSTAT:faostat_drose_a_c_n2o"
+            },
+            {
+                "dimensions": {
+                    "landuse": "C",
+                    "gas": "CO2"
+                },
+                "style": "FAOSTAT:faostat_drose_a_c_co2"
+            }
+        ]
+    }    
+}

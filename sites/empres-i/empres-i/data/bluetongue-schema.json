@@ -1,0 +1,121 @@
+{
+    "version": "2.0",
+    "class": "dataset",
+    "href": "https://data.apps.fao.org/map/catalog/srv/api/records/59f7a5ef-2be4-43ee-9600-a6a9e9ff562a/attachments/MapSpam_Dimensions.json",
+    "label": "Bluetongue Schema",
+    "source": "https://data.apps.fao.org/map/catalog/srv/eng/catalog.search#/metadata/59f7a5ef-2be4-43ee-9600-a6a9e9ff562a",
+    "updated": "2013-04-19",
+    "value": [],
+    "id": [
+      "serotype","diagnosis_status", "animal_type", "start_date", "end_date"
+    ],
+    "size": [
+      15, 5, 6, 1, 1
+    ],
+    "role": {
+        "time": ["start_date", "end_date"],
+        "metric":["serotype","subtype","diagnosis_status", "animal_type"]
+    },
+    "dimension": {
+        "start_date": {
+            "label": "Start Observation Date",
+            "category": {}
+        },
+        "end_date": {
+            "label": "End Observation Date",
+            "category": {}
+        },
+        "serotype":{
+            "label":"Type",
+            "category": {
+                "index": {
+                    "all":0,
+                    "1":1,
+                    "2":2,
+                    "3":3,
+                    "4":4,
+                    "5":5,
+                    "8":6,
+                    "12":7,
+                    "13":8,
+                    "14":9,
+                    "16":10,
+                    "18":11,
+                    "19":12,
+                    "22":13,                    
+                    "Not specified":14
+                },
+                "label": {
+                    "all":"All",
+                    "1":"1",
+                    "2":"2",
+                    "3":"3",
+                    "4":"4",
+                    "5":"5",
+                    "8":"8",
+                    "12":"12",
+                    "13":"13",
+                    "14":"14",
+                    "16":"16",
+                    "18":"18",
+                    "19":"19",
+                    "22":"22",                    
+                    "Not specified":"Not specified"        
+                }
+            }
+        },
+        "diagnosis_status":{
+            "label":"Diagnosis Status",
+            "category": {
+                "index": {
+                    "confirmed":0,
+                    "denied":1,
+                    "suspected":2,
+                    "no_value":3,
+                    "all":4
+                },
+                "label": {
+                    "confirmed":"Confirmed",
+                    "denied":"Denied",
+                    "suspected":"Suspected",
+                    "no_value":"No value",
+                    "all":"All"
+                }
+            
+            }
+        },
+        "animal_type":{
+            "label":"Animal Type",
+            "category": {
+                "index": {
+                    "captive":0,
+                    "domestic":1,
+                    "environmental_sample":2,
+                    "wild":3,
+                    "no_value":4,
+                    "all":5
+                },
+                "label": {
+                    "captive":"Captive",
+                    "domestic":"Domestic",
+                    "environmental_sample":"Environmental sample",
+                    "wild":"Wild",
+                    "no_value":"No value",
+                    "all":"All"
+                }
+            
+            }
+        }
+
+    },
+    "extension": {
+        "default": {
+            "start_date": "2021-01-01",
+            "end_date": "2021-11-15",
+            "serotype": "all",
+            "diagnosis_status":"confirmed",
+            "animal_type":"all"
+        }
+    }
+}
+  

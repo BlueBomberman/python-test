@@ -1,0 +1,39 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "FID": 1,
+        "Title": "World"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -180,
+              84.999999
+            ],
+            [
+              -180,
+              -84.999999
+            ],
+            [
+              180,
+              -84.999999
+            ],
+            [
+              180,
+              84.999999
+            ],
+            [
+              -180,
+              84.999999
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}
