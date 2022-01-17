@@ -11,6 +11,6 @@ def hello_pubsub(event, context):
     pubsub_message = base64.b64decode(event['data']).decode('utf-8')
     print('args', event, context);
     site = event['attributes']['dir']
-    print(pubsub_message, site)
+    print(pubsub_message, site, event['attibutes'], event.attributes.dir)
     builder.build(site)
 
