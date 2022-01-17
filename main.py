@@ -1,4 +1,3 @@
-import base64
 import builder as builder
 
 
@@ -8,9 +7,4 @@ def hello_pubsub(event, context):
          event (dict): Event payload.
          context (google.cloud.functions.Context): Metadata for the event.
     """
-    pubsub_message = base64.b64decode(event['data']).decode('utf-8')
-    print('args', event, context);
-    site = event['attributes']['dir']
-    print(pubsub_message, site, event['attibutes'], event.attributes.dir)
-    builder.build(site)
-
+    builder.build("empres-i")
